@@ -1,0 +1,45 @@
+:root {
+	// colors
+  --color-dark-green: #12A028;
+  --color-light-green: #07D827;
+  --color-green-active: #30FA4F;
+	--color-dark: #222222;
+	--color-bg: #f5f5f5;
+	--color-bg2: #383838;
+  --color-grey: #8A8EA1;
+  --color-border: #929292;
+	--color-white: #fff;
+
+  // Typography
+	--main-ff: "Inter", sans-serif;
+
+  --font-body-1: 600 5.2rem/6.3rem var(--main-ff);
+  --font-body-2: 600 3.2rem/4.8rem var(--main-ff);
+  --font-body-3-700: 700 2.4rem/3.2rem var(--main-ff);
+  --font-body-3-600: 600 2.4rem/3.2rem var(--main-ff);
+  --font-body-4-700: 700 2rem/2.8rem var(--main-ff);
+  --font-body-4-600: 600 2rem/2.8rem var(--main-ff);
+  --font-body-4-400: 400 2rem/2.8rem var(--main-ff);
+  --font-body-5-400: 400 1.6rem/2.4rem var(--main-ff);
+  --font-body-5-600: 600 1.6rem/2.4rem var(--main-ff);
+  --font-body-6: 400 1.4rem/2rem var(--main-ff);
+  --font-body-7: 400 1.2rem/1.6rem var(--main-ff);
+
+  // offset
+  --offset-140: 14rem;
+  --offset-60: 6rem;
+  --offset-56: 5.6rem;
+  --offset-32: 3.2rem;
+  --offset-20: 2rem;
+  --offset-12: 1.2rem;
+  --offset-4: 0.4rem;
+
+  // transition
+  --transition: 200ms;
+}
+
+@import "./helpers/**/*";
+@import './vendor/**/*';
+@import "./settings/**/*";
+@import "./blocks/**/*";
+@import './pages/**/*';

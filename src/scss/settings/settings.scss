@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	line-height: 1.4;
+}
+
+body {
+	color: var(--color-dark);
+	background-color: var(--color-bg);
+  font: var(--font-body-5-400);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.list-rest {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0 0 0 0);
+}
+
+.site-container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.page-main {
+	flex-grow: 1;
+}
+
+.button-reset {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  font-family: var(--main-ff);
+}
+
+.js-focus-visible button:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.js-focus-visible a:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.js-focus-visible input:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.js-focus-visible textarea:focus:not(.focus-visible) {
+  outline: none;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+a {
+  color: var(--color-dark-green);
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--color-light-green);
+  }
+
+  &:active {
+    color: var(--color-green-active);
+  }
+}
+
+.site-second-heading {
+  font: var(--font-body-1);
+  text-transform: uppercase;
+}
+
+.site-third-heading-bold {
+  font: var(--font-body-4-700);
+}
+
+.site-third-heading-semibold {
+  font: var(--font-body-4-600);
+}
