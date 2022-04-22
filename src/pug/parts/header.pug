@@ -1,3 +1,12 @@
 header.header
-	.site-container
-		h1 header
+  .site-container.header__container
+    a.header__logo(href="/")
+      img(src="images/logo-kdw.svg" alt="Логотип Kazan Digital Week 2022" class="header__logo-img")
+    img(src="images/logo-rivc.svg" alt="Логотип компании РИВЦ" class="header__logo-rivc")
+    a.header__link(href="/") ДЕЛОВАЯ ПРОГРАММА
+    a.header__link(href="/") ЭКСПОЗИЦИЯ
+    button.button-reset.button ЗАРЕГИСТРИРОВАТЬСЯ
+    button.button-reset.header__burger-btn
+      span
+      span
+      span

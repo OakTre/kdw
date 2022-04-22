@@ -1,0 +1,69 @@
+-
+  let arr_part = [
+    {
+      name: "Максимов Алексей Семенович ",
+      text: "Глава администрации Азнакаевского района",
+      img: "img1",
+    },
+    {
+      name: "Павлова Оксана Викторовна",
+      text: "Глава администрации Азнакаевского района",
+      img: "img2",
+    },
+    {
+      name: "Егорова Екатерина Вадимовна",
+      text: "Глава администрации Азнакаевского района",
+      img: "img3",
+    },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Глава администрации Азнакаевского района",
+      img: "img4",
+    },
+  ]
+
+  let arr_part2 = [
+        {
+      name: "Максимов Алексей Семенович ",
+      text: "Системный аналитик MediaSoft",
+      img: "img1",
+    },
+    {
+      name: "Павлова Оксана Викторовна",
+      text: "Системный аналитик MediaSoft",
+      img: "img2",
+    },
+    {
+      name: "Егорова Екатерина Вадимовна",
+      text: "Системный аналитик MediaSoft",
+      img: "img3",
+    },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Системный аналитик MediaSoft",
+      img: "img4",
+    },
+  ]
+
+section.participants.section-indent-padding
+  .site-container.participants__container
+    h2.site-second-heading.participants__heading Гости
+    .grid-container
+      for item in arr_part
+        .participants__item
+          img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+          p.participants__name.site-third-heading-bold= item.name
+          span.participants__position= item.text
+
+
+section.participants.section-indent-padding
+  .site-container.participants__container
+    h2.site-second-heading.participants__heading СПИКЕРЫ
+    .grid-container
+      for item in arr_part2
+        .participants__item
+          img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+          p.participants__name.site-third-heading-bold= item.name
+          span.participants__position= item.text
+          a.participants__link(href="/")
+            | На сайт компании

@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  padding-top: 3.2rem;
+  color: var(--color-white);
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    margin-right: 2.4rem;
+  }
+
+  &__logo-img {
+    object-fit: cover;
+    width: 10.3rem;
+    height: auto;
+  }
+
+  &__logo-rivc {
+    display: block;
+    object-fit: cover;
+    width: 11.5rem;
+    margin-right: auto;
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: var(--offset-32);
+
+    &:hover,
+    &:focus {
+      color: var(--color-light-green);
+    }
+
+    &:active {
+      color: var(--color-dark-green);
+    }
+  }
+
+  &__burger-btn {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    margin-left: 10.4rem;
+
+    span {
+      display: block;
+      width: 3.5rem;
+      height: 0.3rem;
+      background-color: var(--color-white);
+      transition: background-color var(--transition);
+    }
+
+    &:hover {
+      span {
+        background-color: var(--color-light-green);
+      }
+    }
+
+    &:active {
+      span {
+        background-color: var(--color-dark-green);
+      }
+    }
+  }
+}

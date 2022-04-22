@@ -1,0 +1,39 @@
+.numbers {
+  position: relative;
+  padding: 14rem 0;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__container {
+    gap: 8rem var(--offset-32);
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+
+  &__item-legend {
+    display: block;
+    font: 700 6.4rem/1 var(--main-ff);
+    margin-bottom: 2rem;
+    color: var(--color-dark-green);
+  }
+
+  &__item-text {
+    max-width: 25rem;
+  }
+
+  &__item-icon {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    margin-bottom: 3.1rem;
+  }
+}

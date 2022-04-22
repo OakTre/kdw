@@ -18,20 +18,170 @@
   <body class="page-home">
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container">
-          <h1>header</h1>
+        <div class="site-container header__container"><a class="header__logo" href="/"><img class="header__logo-img" src="images/logo-kdw.svg" alt="Логотип Kazan Digital Week 2022"></a><img class="header__logo-rivc" src="images/logo-rivc.svg" alt="Логотип компании РИВЦ"><a class="header__link" href="/">ДЕЛОВАЯ ПРОГРАММА</a><a class="header__link" href="/">ЭКСПОЗИЦИЯ</a>
+          <button class="button-reset button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+          <button class="button-reset header__burger-btn"><span></span><span></span><span></span></button>
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
+        <section class="intro" style="background-image: url(images/intro-bg.jpg)">
           <div class="site-container">
-            <h1>Hero Heading</h1>
+            <svg class="icon icon-scroll-by intro__scroll-by-icon" width="21" height="28">
+              <use xlink:href="images/sprites/sprite-mono.svg#scroll-by"></use>
+            </svg>
+            <div class="grid-container">
+              <div class="intro__heading-block"></div>
+              <div class="intro__heading-block">
+                <div class="intro__heading-text"><span class="intro__text-white">Kazan</span><span class="intro__text-big">DIGITAL</span><span class="intro__text-white">Week – 2022</span></div>
+              </div>
+            </div>
+            <div class="grid-container">
+              <div class="intro__content-block">
+                <p class="intro__content-text">Международный форум в сфере цифровых технологий в сельском хозяйстве</p>
+              </div>
+              <div class="intro__content-block">
+                <p class="intro__content-text">г. Казань<br>21-24 сентября 2022</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="numbers section-indent-padding"><img class="numbers__img" src="images/numbers/map.svg" alt="">
+          <div class="site-container numbers__container grid-container">
+            <div class="numbers__item"><span class="numbers__item-legend">1 000</span>
+              <p class="numbers__item-text">Квадратных метров площадь блока АПК</p>
+            </div>
+            <div class="numbers__item"><span class="numbers__item-legend">200</span>
+              <p class="numbers__item-text">Резидентов в области агро IT</p>
+            </div>
+            <div class="numbers__item"><span class="numbers__item-legend">30 000</span>
+              <p class="numbers__item-text">Сельхозтоваропроизводителей со всей России и ближнего зарубежья</p>
+            </div>
+            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon1.svg" alt="">
+              <p class="numbers__item-text">Обмен опытом цифровизации АПК в регионах</p>
+            </div>
+            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon2.svg" alt="">
+              <p class="numbers__item-text">Поиск решения санкционных вызовов</p>
+            </div>
+            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon3.svg" alt="">
+              <p class="numbers__item-text">Презентация проектов, готовых к масштабированию в АПК</p>
+            </div>
+          </div>
+        </section>
+        <section class="forum section-indent-padding">
+          <div class="site-container forum__container">
+            <h2 class="forum__heading site-second-heading">Форум для</h2>
+            <ul class="forum__list grid-container">
+              <li class="forum__item">
+                <svg class="icon icon-forum-img0 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img0"></use>
+                </svg>
+                <p>Представителей региональных органов исполнительной власти АПК</p>
+              </li>
+              <li class="forum__item">
+                <svg class="icon icon-forum-img1 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img1"></use>
+                </svg>
+                <p>Собственников бизнеса в сфере АПК, в том числе IT в АПК</p>
+              </li>
+              <li class="forum__item">
+                <svg class="icon icon-forum-img2 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img2"></use>
+                </svg>
+                <p>Разработчиков IT-технологий для АПК</p>
+              </li>
+              <li class="forum__item">
+                <svg class="icon icon-forum-img3 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img3"></use>
+                </svg>
+                <p>Представителей ТОП-менеджмента в сфере АПК</p>
+              </li>
+              <li class="forum__item">
+                <svg class="icon icon-forum-img4 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img4"></use>
+                </svg>
+                <p>Специалистов в области цифровых технологий</p>
+              </li>
+              <li class="forum__item">
+                <svg class="icon icon-forum-img5 forum__item-img">
+                  <use xlink:href="images/sprites/sprite-mono.svg#forum-img5"></use>
+                </svg>
+                <p>Представителей «Стартапа» в сфере IT для АПК</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="participants section-indent-padding">
+          <div class="site-container participants__container">
+            <h2 class="site-second-heading participants__heading">Гости</h2>
+            <div class="grid-container">
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img1.jpg" alt="Максимов Алексей Семенович  Глава администрации Азнакаевского района">
+                <p class="participants__name site-third-heading-bold">Максимов Алексей Семенович </p><span class="participants__position">Глава администрации Азнакаевского района</span>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img2.jpg" alt="Павлова Оксана Викторовна Глава администрации Азнакаевского района">
+                <p class="participants__name site-third-heading-bold">Павлова Оксана Викторовна</p><span class="participants__position">Глава администрации Азнакаевского района</span>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img3.jpg" alt="Егорова Екатерина Вадимовна Глава администрации Азнакаевского района">
+                <p class="participants__name site-third-heading-bold">Егорова Екатерина Вадимовна</p><span class="participants__position">Глава администрации Азнакаевского района</span>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img4.jpg" alt="Грошин Иван Давидович Глава администрации Азнакаевского района">
+                <p class="participants__name site-third-heading-bold">Грошин Иван Давидович</p><span class="participants__position">Глава администрации Азнакаевского района</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="participants section-indent-padding">
+          <div class="site-container participants__container">
+            <h2 class="site-second-heading participants__heading">СПИКЕРЫ</h2>
+            <div class="grid-container">
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img1.jpg" alt="Максимов Алексей Семенович  Системный аналитик MediaSoft">
+                <p class="participants__name site-third-heading-bold">Максимов Алексей Семенович </p><span class="participants__position">Системный аналитик MediaSoft</span><a class="participants__link" href="/">На сайт компании</a>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img2.jpg" alt="Павлова Оксана Викторовна Системный аналитик MediaSoft">
+                <p class="participants__name site-third-heading-bold">Павлова Оксана Викторовна</p><span class="participants__position">Системный аналитик MediaSoft</span><a class="participants__link" href="/">На сайт компании</a>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img3.jpg" alt="Егорова Екатерина Вадимовна Системный аналитик MediaSoft">
+                <p class="participants__name site-third-heading-bold">Егорова Екатерина Вадимовна</p><span class="participants__position">Системный аналитик MediaSoft</span><a class="participants__link" href="/">На сайт компании</a>
+              </div>
+              <div class="participants__item"><img class="participants__item-img" src="images/participants/img4.jpg" alt="Грошин Иван Давидович Системный аналитик MediaSoft">
+                <p class="participants__name site-third-heading-bold">Грошин Иван Давидович</p><span class="participants__position">Системный аналитик MediaSoft</span><a class="participants__link" href="/">На сайт компании</a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
       <footer class="footer">
         <div class="site-container">
-          <h1>footer</h1>
+          <div class="grid-container">
+            <div class="footer__block">
+              <button class="button-reset button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            </div>
+            <div class="footer__block">
+              <p class="footer__legend">21-24 сентября<br>г. Казань, Международный выставочный комплекс «Kazan Expo»</p>
+              <ul class="footer__links">
+                <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Программа форума</a></li>
+                <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">План выставочной экспозиции</a></li>
+                <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Условия участия в выставке</a></li>
+                <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Скачать презентацию мероприятия</a></li>
+              </ul>
+            </div>
+            <div class="footer__block">
+              <p class="footer__legend">АО РИВЦ</p><a class="footer__link" href="tel:+79274921836">+7 927 492-18-36</a>
+              <p class="footer__chief">Сабиров Радик<span>Куратор Kazan Digital Week</span></p>
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link" href="/">
+                    <svg class="icon icon-vk socials__link-icon" width="22" height="14">
+                      <use xlink:href="images/sprites/sprite-mono.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="/">
+                    <svg class="icon icon-tg socials__link-icon" width="20" height="16">
+                      <use xlink:href="images/sprites/sprite-mono.svg#tg"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p class="footer__copyright-txt">Kazan Digital Week © 2022</p><a class="footer__copyright-link" href="/">Design by:<span>Vlad Alyakin</span></a>
+          </div>
         </div>
       </footer>
     </div>

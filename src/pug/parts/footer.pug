@@ -1,3 +1,37 @@
 footer.footer
-	.site-container
-		h1 footer
+  .site-container
+    .grid-container
+      .footer__block
+        button.button-reset.button ЗАРЕГИСТРИРОВАТЬСЯ
+      .footer__block
+        p.footer__legend
+          | 21-24 сентября
+          br
+          | г. Казань, Международный выставочный комплекс «Kazan Expo»
+        ul.footer__links
+          li.footer__links-wrapper
+            a(href="/" class="footer__nav-link") Программа форума
+          li.footer__links-wrapper
+            a(href="/" class="footer__nav-link") План выставочной экспозиции
+          li.footer__links-wrapper
+            a(href="/" class="footer__nav-link") Условия участия в выставке
+          li.footer__links-wrapper
+            a(href="/" class="footer__nav-link") Скачать презентацию мероприятия
+      .footer__block
+        p.footer__legend АО РИВЦ
+        a.footer__link(href="tel:+79274921836") +7 927 492-18-36
+        p.footer__chief
+          | Сабиров Радик
+          span Куратор Kazan Digital Week
+        ul.socials
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("vk")(class="socials__link-icon" width="22" height="14")
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("tg")(class="socials__link-icon" width="20" height="16")
+    .footer__copyright
+      p.footer__copyright-txt Kazan Digital Week © 2022
+      a.footer__copyright-link(href="/")
+        | Design by:
+        span Vlad Alyakin

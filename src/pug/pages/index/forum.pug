@@ -1,0 +1,18 @@
+-
+  let arr = [
+    "Представителей региональных органов исполнительной власти АПК",
+    "Собственников бизнеса в сфере АПК, в том числе IT в АПК",
+    "Разработчиков IT-технологий для АПК",
+    "Представителей ТОП-менеджмента в сфере АПК",
+    "Специалистов в области цифровых технологий",
+    "Представителей «Стартапа» в сфере IT для АПК"
+  ]
+
+section.forum.section-indent-padding
+  .site-container.forum__container
+    h2.forum__heading.site-second-heading Форум для
+    ul.forum__list.grid-container
+      for item, index in arr
+        li.forum__item
+          +icon-mono(`forum-img${index}`)(class="forum__item-img")
+          p= item
