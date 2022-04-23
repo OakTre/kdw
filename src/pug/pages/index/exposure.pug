@@ -1,0 +1,28 @@
+section.exposure.section-indent-padding(id="exposure")
+  .site-container.exposure__container.grid-container
+    .exposure__block
+      .slider-nav.exposure__nav
+        button.button-reset.slider-nav__btn.js-exposure-btn-prev(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+        button.button-reset.slider-nav__btn.js-exposure-btn-next(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+      .exposure__slider.js-exposure-slider.swiper
+        .swiper-wrapper
+          img.exposure__slide.swiper-slide(src="images/exposure/img1.jpg" alt="")
+          img.exposure__slide.swiper-slide(src="images/exposure/img1.jpg" alt="")
+          img.exposure__slide.swiper-slide(src="images/exposure/img1.jpg" alt="")
+    .exposure__block
+      .exposure__content
+        h2 ЭКСПОЗИЦИЯ
+        p
+          | Мы создали условия для эффективного
+          | продвижения новых проектов и бизнеса.
+          | Выставочная площадь разработана таким образом,
+          | чтобы экспонентам и посетителям было удобно и комфортно работать
+        .exposure__links
+          a.exposure__link(href="/")
+            | Условия участия в выставке
+            +icon-mono("arrow")(class="exposure__link-arrow" width="21" height="12")
+          a.exposure__link(href="/")
+            | План выстовочной экспозиции
+            +icon-mono("arrow")(class="exposure__link-arrow" width="21" height="12")

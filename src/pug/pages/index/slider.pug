@@ -1,0 +1,18 @@
+section.section-indent-padding.gallery
+  .site-container
+    .slider-nav.gallery__nav
+      button.button-reset.slider-nav__btn.js-gallery-btn-prev(aria-label="Следующий слайд")
+        +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+      button.button-reset.slider-nav__btn.js-gallery-btn-next(aria-label="Следующий слайд")
+        +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+    .gallery__container.grid-container
+      .gallery__container-block
+      .gallery__container-block
+        .gallery__wrapper
+          .gallery__slider.swiper.js-gallery-slider
+            .swiper-wrapper
+              img.gallery__slide.swiper-slide(src="images/gallery/img1.jpg" alt="")
+              img.gallery__slide.swiper-slide(src="images/gallery/img2.jpg" alt="")
+              img.gallery__slide.swiper-slide(src="images/gallery/img3.jpg" alt="")
+              img.gallery__slide.swiper-slide(src="images/gallery/img3.jpg" alt="")
+      .gallery__container-block

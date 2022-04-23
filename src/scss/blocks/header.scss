@@ -7,6 +7,40 @@
   padding-top: 3.2rem;
   color: var(--color-white);
 
+  &.is-fixed {
+    background: var(--color-dark);
+    box-shadow: 0 0 10px rgba($color: #1E1E1E, $alpha: 0.5);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    animation: fromTop 0.4s linear;
+
+    .header__logo-img {
+      width: 6.3rem;
+    }
+
+    .header__logo-rivc {
+      width: 8.5rem;
+    }
+
+    .header__link {
+      font: var(--font-body-6);
+    }
+
+    .button {
+      padding: 1rem 2rem;
+      font: var(--font-body-6);
+    }
+  }
+
+  @keyframes fromTop {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;

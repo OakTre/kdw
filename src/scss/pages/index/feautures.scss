@@ -1,0 +1,23 @@
+.feautures {
+  &__item {
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #CBCBCB;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__item-heading {
+    font: 700 6.4rem/1 var(--main-ff);
+    margin-bottom: 2rem;
+    color: var(--color-dark-green);
+  }
+
+  &__text {
+    // max-width: 27.5rem;
+  }
+}

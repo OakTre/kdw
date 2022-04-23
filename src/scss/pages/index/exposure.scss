@@ -1,0 +1,69 @@
+.exposure {
+  &__block {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+
+    &:nth-child(1) {
+      grid-column: 7 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 5 span;
+    }
+  }
+
+  &__nav {
+    width: calc(100% - 3rem);
+    top: 50%;
+  }
+
+  &__slide {
+    height: 42rem;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+
+    h2 {
+      font: var(--font-body-1);
+      text-transform: uppercase;
+      margin-bottom: var(--offset-32);
+    }
+  }
+
+  &__links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--color-dark-green);
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-light-green);
+    }
+  }
+
+  &__link-arrow {
+    width: 2rem;
+    height: 1.2rem;
+    fill: currentColor;
+    margin-left: 1.2rem;
+  }
+}

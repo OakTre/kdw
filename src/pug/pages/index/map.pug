@@ -1,0 +1,22 @@
+section.map
+  .map__container.js-map(data-coords="55.611597, 49.298878" data-center="55.611597, 49.298878")
+  .site-container.map__content
+    .map__content-block
+      p.map__heading-text Место проведения
+      p.map__link
+        +icon-mono("marker")(class="map__link-icon" width="24" height="24")
+        | ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017
+      a.map__link(href="tel:+")
+        +icon-mono("tel")(class="map__link-icon" width="24" height="24")
+        | +7 927 492-18-36
+        span (Сабиров Радик)
+      a.map__link(href="mailto:kazandigital@mail.ru")
+        +icon-mono("mail")(class="map__link-icon" width="24" height="24")
+        | kazandigital@mail.ru
+      ul.socials.map__socials
+        li.socials__item
+          a.socials__link(href="/")
+            +icon-mono("vk")(class="socials__link-icon" width="22" height="14")
+        li.socials__item
+          a.socials__link(href="/")
+            +icon-mono("tg")(class="socials__link-icon" width="20" height="16")

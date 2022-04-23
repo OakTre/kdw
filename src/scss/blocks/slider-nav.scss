@@ -1,0 +1,65 @@
+.slider-nav {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 3;
+  width: calc(100% + 15rem);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+
+  @include mq(xl) {
+    width: calc(100% - 3rem) !important;
+    z-index: 4;
+  }
+
+  @include mq(lg) {
+    display: none;
+  }
+
+  &__btn {
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+
+      .icon {
+        fill: var(--color-grey);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        fill: var(--color-dark-green);
+      }
+    }
+
+    &:active {
+      .icon {
+        fill: #118423;
+      }
+    }
+
+    &:nth-child(1) {
+      .icon {
+        transform: scale(-1,1);
+      }
+    }
+
+    .icon {
+      width: 100%;
+      height: auto;
+      fill: var(--color-border);
+      transition: fill var(--transition);
+      cursor: pointer;
+    }
+  }
+}

@@ -3,9 +3,12 @@ header.header
     a.header__logo(href="/")
       img(src="images/logo-kdw.svg" alt="Логотип Kazan Digital Week 2022" class="header__logo-img")
     img(src="images/logo-rivc.svg" alt="Логотип компании РИВЦ" class="header__logo-rivc")
-    a.header__link(href="/") ДЕЛОВАЯ ПРОГРАММА
-    a.header__link(href="/") ЭКСПОЗИЦИЯ
-    button.button-reset.button ЗАРЕГИСТРИРОВАТЬСЯ
+    a.header__link(href="#programm") ДЕЛОВАЯ ПРОГРАММА
+    a.header__link(href="#exposure") ЭКСПОЗИЦИЯ
+    button.button-reset.button
+      span._border-top
+      span._border-bottom
+      | ЗАРЕГИСТРИРОВАТЬСЯ
     button.button-reset.header__burger-btn
       span
       span

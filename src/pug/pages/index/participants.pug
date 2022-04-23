@@ -20,10 +20,20 @@
       text: "Глава администрации Азнакаевского района",
       img: "img4",
     },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Системный аналитик MediaSoft",
+      img: "img4",
+    },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Системный аналитик MediaSoft",
+      img: "img4",
+    },
   ]
 
   let arr_part2 = [
-        {
+    {
       name: "Максимов Алексей Семенович ",
       text: "Системный аналитик MediaSoft",
       img: "img1",
@@ -43,27 +53,54 @@
       text: "Системный аналитик MediaSoft",
       img: "img4",
     },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Системный аналитик MediaSoft",
+      img: "img4",
+    },
+    {
+      name: "Грошин Иван Давидович",
+      text: "Системный аналитик MediaSoft",
+      img: "img4",
+    },
   ]
 
 section.participants.section-indent-padding
   .site-container.participants__container
     h2.site-second-heading.participants__heading Гости
-    .grid-container
-      for item in arr_part
-        .participants__item
-          img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
-          p.participants__name.site-third-heading-bold= item.name
-          span.participants__position= item.text
+    .participants__slider-wrapper
+      .slider-nav
+        button.button-reset.slider-nav__btn.js-participants-btn-prev(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+        button.button-reset.slider-nav__btn.js-participants-btn-next(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+      .swiper.js-participants-slider
+        .swiper-wrapper
+          for item in arr_part
+            .participants__item.swiper-slide
+              .participants__item-img-wrapper
+                img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+              p.participants__name.site-third-heading-bold= item.name
+              span.participants__position= item.text
 
 
 section.participants.section-indent-padding
   .site-container.participants__container
     h2.site-second-heading.participants__heading СПИКЕРЫ
-    .grid-container
-      for item in arr_part2
-        .participants__item
-          img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
-          p.participants__name.site-third-heading-bold= item.name
-          span.participants__position= item.text
-          a.participants__link(href="/")
-            | На сайт компании
+    .participants__slider-wrapper
+      .slider-nav
+        button.button-reset.slider-nav__btn.js-participants-btn-prev(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+        button.button-reset.slider-nav__btn.js-participants-btn-next(aria-label="Следующий слайд")
+          +icon-mono("arrow")(class="slider-nav__btn-icon" width="21" height="12")
+      .swiper.js-participants-slider
+        .swiper-wrapper
+          for item in arr_part2
+            .participants__item.swiper-slide
+              .participants__item-img-wrapper
+                img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+              p.participants__name.site-third-heading-bold= item.name
+              span.participants__position= item.text
+              a.participants__link(href="/")
+                | На сайт компании
+                +icon-mono("arrow")(class="participants__link-arrow" width="21" height="12")

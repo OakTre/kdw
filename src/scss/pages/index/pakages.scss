@@ -1,0 +1,106 @@
+.pakages {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 35.1rem;
+    background-color: var(--color-dark);
+    content: "";
+  }
+
+
+  &__item {
+    grid-column: 3 span;
+    min-height: 39.1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    transition: transform var(--transition);
+
+    &:hover {
+      transform: translateY(-2rem);
+    }
+  }
+
+  &__item-top {
+    flex-grow: 1;
+    padding: 5.6rem 3.2rem 3.2rem;
+
+    p {
+      color: var(--color-grey);
+      text-align: center;
+      font: var(--font-body-6);
+    }
+  }
+
+  &__item-name {
+    position: relative;
+    font: var(--font-body-4-700);
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3.2rem;
+      height: 0.4rem;
+      background-color: var(--color-dark-green);
+      content: "";
+    }
+  }
+
+  &__item-bottom {
+    height: 5.6rem;
+  }
+
+  &__item-btn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover {
+      span {
+        background-color: var(--color-dark-green);
+        color: var(--color-white);
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      flex-grow: 1;
+      padding: 1.6rem 2.4rem;
+      border-top: 1px solid var(--color-dark-green);
+      border-bottom: 1px solid var(--color-dark-green);
+      border-left: 1px solid var(--color-dark-green);
+      transition: background-color var(--transition), color var(--transition);
+    }
+  }
+
+  &__item-btn-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 100%;
+    border: 1px solid var(--color-dark-green);
+    background-color: var(--color-dark-green);
+  }
+
+  &__item-btn-icon {
+    display: block;
+    width: 2.2rem;
+    height: 1.2rem;
+    fill: var(--color-white);
+  }
+}

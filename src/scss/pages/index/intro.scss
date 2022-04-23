@@ -7,6 +7,22 @@
   background-size: cover;
   padding-top: 14.1rem;
 
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.6);
+    content: "";
+  }
+
+  .site-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
   &__scroll-by-icon {
     position: absolute;
     left: 50%;
@@ -46,7 +62,7 @@
   }
 
   &__heading-text {
-    margin-bottom: 5.6rem;
+    margin-bottom: 10.6rem;
   }
 
   &__text-white {
@@ -54,17 +70,20 @@
     text-transform: uppercase;
     color: var(--color-white);
     font: 400 7.4rem/1 var(--main-ff);
+
+    &:nth-of-type(2) {
+      margin-left: 6rem;
+    }
   }
 
   &__text-big {
     display: block;
-    font: 900 11.5rem/1 var(--main-ff);
-    letter-spacing: 0.26em;
-    color: var(--color-green-active);
-    margin: 2.4rem 0;
-    // text-shadow: 0px 0px 4px #92E3A9;
-    // -webkit-text-stroke: 1px var(--color-light-green);
-    // -webkit-background-clip:text;
-    // -webkit-text-fill-color:transparent;
+    margin: 2.4rem 0 2.4rem 14.4rem;
+
+    svg {
+      display: block;
+      width: 64.9rem;
+      height: auto;
+    }
   }
 }

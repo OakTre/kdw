@@ -1,0 +1,13 @@
+section.pakages.section-indent-padding
+  .site-container.pakages__container.grid-container
+    - for (let i = 0; i<4; i++)
+      .pakages__item
+        .pakages__item-top
+          h3.pakages__item-name Название пакета
+          p
+            | Самый масштабный блок среди всех направлений выставки
+        .pakages__item-bottom
+          button.button-reset.pakages__item-btn
+            span Узнать цену
+            .pakages__item-btn-icon-wrapper
+              +icon-mono("arrow")(width="20" height="12" class="pakages__item-btn-icon")

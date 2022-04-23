@@ -1,0 +1,19 @@
+.shiled {
+  color: var(--color-white);
+
+  &__container {
+    background-color: var(--color-dark);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 6rem;
+
+    p {
+      font: var(--font-body-3-700);
+      max-width: 71.8rem;
+    }
+  }
+}
