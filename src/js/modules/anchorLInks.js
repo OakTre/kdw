@@ -2,16 +2,25 @@ import gsap from "gsap";
 import {
   ScrollToPlugin
 } from "gsap/dist/ScrollToPlugin";
+import { disableScroll, enableScroll } from "../helpers/disableScroll";
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
-  const header = document.querySelector('.header')
+  const header = document.querySelector('.header');
+  const menu = document.querySelector(".menu");
   const OFFSET = 120;
   const DURATION = 1;
   const scrollByHash = (hash) => {
     const elementToScroll = document.querySelector(hash);
     if (elementToScroll) {
+      if (header.classList.contains("menu-is-opened") && window.flag === true) {
+        header.classList.remove("menu-is-opened");
+        menu.classList.remove("is-active");
+
+        enableScroll();
+        window.flag = false;
+      }
       gsap.to(window, {
         duration: DURATION,
         ease: "power2.out",

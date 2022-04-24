@@ -19,6 +19,10 @@ html {
   @include mq(custom,max,1366) {
     font-size: 8px;
   }
+
+  @include mq(md) {
+    font-size: 7px;
+  }
 }
 
 body {
@@ -55,6 +59,11 @@ img {
 
   @include mq(custom,min,2000) {
     max-width: 1720px;
+  }
+
+  @include mq(md) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -197,4 +206,13 @@ a {
 
 .section-indent-padding {
   padding-bottom: 14rem;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }

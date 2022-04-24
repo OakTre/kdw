@@ -1,0 +1,62 @@
+-
+  let menu_arr = [
+    {
+      name: "О ФОРУМЕ",
+      hash: "about"
+    },
+    {
+      name: "ГОСТИ И СПИКЕРЫ",
+      hash: "participants"
+    },
+    {
+      name: "ДЕЛОВАЯ ПРОГРАММА",
+      hash: "programm"
+    },
+    {
+      name: "ЭКСПОЗИЦИЯ",
+      hash: "exposure"
+    },
+    {
+      name: "ПАРТНЕРЫ",
+      hash: "partners"
+    },
+    {
+      name: "КАК ДОБРАТЬСЯ",
+      hash: "map"
+    },
+  ]
+
+.menu.fix-blocks
+  .menu__container.site-container.grid-container
+    .menu__container-block
+      ul.menu__list
+        for item in menu_arr
+          li.menu__item
+            a.menu__link(href=`#${item.hash}`)= item.name
+    .menu__container-block
+      .menu__content-block
+        p.menu__legend Полезная информация
+        a.menu__useful-link(href="/") Программа форума
+        a.menu__useful-link(href="/") Условия участия в выставке
+        a.menu__useful-link(href="/") План выставочной экспозиции
+        a.menu__useful-link(href="/") Скачать презентацию мероприятия
+      .menu__content-block
+        p.menu__legend Контакты
+        p.map__link
+          +icon-mono("marker")(class="map__link-icon" width="24" height="24")
+          | ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017
+        a.map__link(href="tel:+")
+          +icon-mono("tel")(class="map__link-icon" width="24" height="24")
+          | +7 927 492-18-36
+          span (Сабиров Радик)
+        a.map__link(href="mailto:kazandigital@mail.ru")
+          +icon-mono("mail")(class="map__link-icon" width="24" height="24")
+          | kazandigital@mail.ru
+        ul.socials.menu__socials
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("vk")(class="socials__link-icon" width="22" height="14")
+          li.socials__item
+            a.socials__link(href="/")
+              +icon-mono("tg")(class="socials__link-icon" width="20" height="16")
+

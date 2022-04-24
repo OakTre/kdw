@@ -7,6 +7,12 @@
   padding-top: 3.2rem;
   color: var(--color-white);
 
+  @include mq(lg) {
+    .button {
+      display: none;
+    }
+  }
+
   &.is-fixed {
     background: var(--color-dark);
     box-shadow: 0 0 10px rgba($color: #1E1E1E, $alpha: 0.5);
@@ -38,6 +44,15 @@
     }
     to {
       transform: translateY(0);
+    }
+  }
+
+  &.menu-is-opened {
+    z-index: 15;
+
+    .header__link {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -76,6 +91,10 @@
 
     &:active {
       color: var(--color-dark-green);
+    }
+
+    @include mq(lg) {
+      display: none;
     }
   }
 

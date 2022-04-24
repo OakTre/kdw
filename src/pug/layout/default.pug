@@ -5,17 +5,19 @@ block variables
 
 doctype html
 html(lang=siteLang)
-	head
-		include ../parts/head.pug
-	body(class=bodyClass)
-		.page-wrapper
-			block header
-				include ../parts/header.pug
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)
+    include ../parts/menu.pug
 
-			block content
+    .page-wrapper
+      block header
+        include ../parts/header.pug
 
-			block footer
-				include ../parts/footer.pug
+      block content
 
-	block scripts
-		script(src="js/main.js?v=" + siteVersion)
+      block footer
+        include ../parts/footer.pug
+
+  block scripts
+    script(src="js/main.js?v=" + siteVersion)

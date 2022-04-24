@@ -16,11 +16,54 @@
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home">
+    <div class="menu fix-blocks">
+      <div class="menu__container site-container grid-container">
+        <div class="menu__container-block">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="#about">О ФОРУМЕ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#participants">ГОСТИ И СПИКЕРЫ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#programm">ДЕЛОВАЯ ПРОГРАММА</a></li>
+            <li class="menu__item"><a class="menu__link" href="#exposure">ЭКСПОЗИЦИЯ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#partners">ПАРТНЕРЫ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#map">КАК ДОБРАТЬСЯ</a></li>
+          </ul>
+        </div>
+        <div class="menu__container-block">
+          <div class="menu__content-block">
+            <p class="menu__legend">Полезная информация</p><a class="menu__useful-link" href="/">Программа форума</a><a class="menu__useful-link" href="/">Условия участия в выставке</a><a class="menu__useful-link" href="/">План выставочной экспозиции</a><a class="menu__useful-link" href="/">Скачать презентацию мероприятия</a>
+          </div>
+          <div class="menu__content-block">
+            <p class="menu__legend">Контакты</p>
+            <p class="map__link">
+              <svg class="icon icon-marker map__link-icon" width="24" height="24">
+                <use xlink:href="images/sprites/sprite-mono.svg#marker"></use>
+              </svg>ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017
+            </p><a class="map__link" href="tel:+">
+              <svg class="icon icon-tel map__link-icon" width="24" height="24">
+                <use xlink:href="images/sprites/sprite-mono.svg#tel"></use>
+              </svg>+7 927 492-18-36<span>(Сабиров Радик)</span></a><a class="map__link" href="mailto:kazandigital@mail.ru">
+              <svg class="icon icon-mail map__link-icon" width="24" height="24">
+                <use xlink:href="images/sprites/sprite-mono.svg#mail"></use>
+              </svg>kazandigital@mail.ru</a>
+            <ul class="socials menu__socials">
+              <li class="socials__item"><a class="socials__link" href="/">
+                  <svg class="icon icon-vk socials__link-icon" width="22" height="14">
+                    <use xlink:href="images/sprites/sprite-mono.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="/">
+                  <svg class="icon icon-tg socials__link-icon" width="20" height="16">
+                    <use xlink:href="images/sprites/sprite-mono.svg#tg"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="page-wrapper">
-      <header class="header">
+      <header class="header fix-blocks">
         <div class="site-container header__container"><a class="header__logo" href="/"><img class="header__logo-img" src="images/logo-kdw.svg" alt="Логотип Kazan Digital Week 2022"></a><img class="header__logo-rivc" src="images/logo-rivc.svg" alt="Логотип компании РИВЦ"><a class="header__link" href="#programm">ДЕЛОВАЯ ПРОГРАММА</a><a class="header__link" href="#exposure">ЭКСПОЗИЦИЯ</a>
           <button class="button-reset button"><span class="_border-top"></span><span class="_border-bottom"></span>ЗАРЕГИСТРИРОВАТЬСЯ</button>
-          <button class="button-reset header__burger-btn"><span></span><span></span><span></span></button>
+          <button class="button-reset header__burger-btn js-open-menu"><span></span><span></span><span></span></button>
         </div>
       </header>
       <main class="page-main main">
@@ -86,7 +129,7 @@
             </div>
           </div>
         </section>
-        <section class="forum section-indent-padding">
+        <section class="forum section-indent-padding" id="about">
           <div class="site-container forum__container">
             <h2 class="forum__heading site-second-heading">Форум для</h2>
             <ul class="forum__list grid-container">
@@ -129,7 +172,7 @@
             </ul>
           </div>
         </section>
-        <section class="participants section-indent-padding">
+        <section class="participants section-indent-padding" id="participants">
           <div class="site-container participants__container">
             <h2 class="site-second-heading participants__heading">Гости</h2>
             <div class="participants__slider-wrapper">
@@ -428,7 +471,7 @@
             </div>
           </div>
         </section>
-        <section class="partners section-indent-padding js-partners-container">
+        <section class="partners section-indent-padding js-partners-container" id="partners">
           <div class="site-container partners__container">
             <h2 class="site-second-heading partners__heading">ПАРТНЕРЫ</h2>
             <ul class="partners__list grid-container">
@@ -457,7 +500,7 @@
             <button class="button-reset partners__show-more js-partners-show-btn"><span class="_show">Смотреть ещё</span><span class="_hide">Скрыть</span></button>
           </div>
         </section>
-        <section class="map">
+        <section class="map" id="map">
           <div class="map__container js-map" data-coords="55.611597, 49.298878" data-center="55.611597, 49.298878"></div>
           <div class="site-container map__content">
             <div class="map__content-block">

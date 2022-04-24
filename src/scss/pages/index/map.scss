@@ -51,6 +51,7 @@
     fill: none;
     stroke: var(--color-light-green);
     margin-right: 1.2rem;
+    flex-shrink: 0;
   }
 
   &__socials {

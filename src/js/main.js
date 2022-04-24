@@ -9,6 +9,7 @@ import participantsSlider from './modules/participantsSlider';
 import map from './modules/map';
 import fixedHeader from './modules/fixedHeader';
 import anchorLInks from './modules/anchorLInks.js';
+import openMenu from './modules/openMenu.js';
 
 documenReady(() => {
   lazyIMages();
@@ -19,4 +20,5 @@ documenReady(() => {
   map();
   fixedHeader();
   anchorLInks();
+  openMenu();
 });
