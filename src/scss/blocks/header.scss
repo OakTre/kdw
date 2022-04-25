@@ -13,6 +13,10 @@
     }
   }
 
+  @include mq(sm) {
+    padding-top: 2.4rem;
+  }
+
   &.is-fixed {
     background: var(--color-dark);
     box-shadow: 0 0 10px rgba($color: #1E1E1E, $alpha: 0.5);
@@ -22,10 +26,18 @@
 
     .header__logo-img {
       width: 6.3rem;
+
+      @include mq(sm) {
+        width: 5.3rem;
+      }
     }
 
     .header__logo-rivc {
       width: 8.5rem;
+
+      @include mq(sm) {
+        width: 7.5rem;
+      }
     }
 
     .header__link {
@@ -64,12 +76,20 @@
   &__logo {
     display: block;
     margin-right: 2.4rem;
+
+    @include mq(sm) {
+      margin-right: 1.2rem;
+    }
   }
 
   &__logo-img {
     object-fit: cover;
     width: 10.3rem;
     height: auto;
+
+    @include mq(sm) {
+      width: 6.9rem;
+    }
   }
 
   &__logo-rivc {
@@ -77,6 +97,10 @@
     object-fit: cover;
     width: 11.5rem;
     margin-right: auto;
+
+    @include mq(sm) {
+      width: 7.8rem;
+    }
   }
 
   &__link {

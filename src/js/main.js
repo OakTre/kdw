@@ -10,6 +10,7 @@ import map from './modules/map';
 import fixedHeader from './modules/fixedHeader';
 import anchorLInks from './modules/anchorLInks.js';
 import openMenu from './modules/openMenu.js';
+import numberMobileSlider from './modules/numberMobileSlider.js';
 
 documenReady(() => {
   lazyIMages();
@@ -21,4 +22,5 @@ documenReady(() => {
   fixedHeader();
   anchorLInks();
   openMenu();
+  numberMobileSlider();
 });

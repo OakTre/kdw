@@ -12,19 +12,15 @@ export default () => {
       nextEl: '.js-exposure-btn-next',
       prevEl: '.js-exposure-btn-prev',
     },
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 1.1,
-    //     spaceBetween: 10
-    //   },
-    //   767: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20
-    //   },
-    //   1200: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20
-    //   },
-    // }
+    breakpoints: {
+      280: {
+        slidesPerView: 1.2,
+        spaceBetween: 25
+      },
+      767: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      }
+    }
   });
 }

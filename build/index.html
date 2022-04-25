@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Главная | Kazan Digital Week</title>
-    <link rel="stylesheet" href="./css/style.min.css?v=0.0.8.3">
+    <link rel="stylesheet" href="./css/style.min.css?v=0.0.8.9">
   </head>
   <body class="page-home">
     <div class="menu fix-blocks">
@@ -103,29 +103,35 @@
               </div>
               <div class="intro__content-block">
                 <p class="intro__content-text">г. Казань<br>21-24 сентября 2022</p>
+                <button class="button-reset button intro__content-btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
               </div>
             </div>
           </div>
         </section>
         <section class="numbers section-indent-padding"><img class="numbers__img" src="images/numbers/map.svg" alt="">
-          <div class="site-container numbers__container grid-container">
-            <div class="numbers__item"><span class="numbers__item-legend">1 000</span>
-              <p class="numbers__item-text">Квадратных метров площадь блока АПК</p>
-            </div>
-            <div class="numbers__item"><span class="numbers__item-legend">200</span>
-              <p class="numbers__item-text">Резидентов в области агро IT</p>
-            </div>
-            <div class="numbers__item"><span class="numbers__item-legend">30 000</span>
-              <p class="numbers__item-text">Сельхозтоваропроизводителей со всей России и ближнего зарубежья</p>
-            </div>
-            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon1.svg" alt="">
-              <p class="numbers__item-text">Обмен опытом цифровизации АПК в регионах</p>
-            </div>
-            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon2.svg" alt="">
-              <p class="numbers__item-text">Поиск решения санкционных вызовов</p>
-            </div>
-            <div class="numbers__item"><img class="numbers__item-icon" src="images/numbers/icon3.svg" alt="">
-              <p class="numbers__item-text">Презентация проектов, готовых к масштабированию в АПК</p>
+          <div class="site-container">
+            <div class="swiper numbers__slider">
+              <div class="swiper-wrapper grid-container numbers__container">
+                <div class="numbers__item swiper-slide"><span class="numbers__item-legend">1 000</span>
+                  <p class="numbers__item-text">Квадратных метров площадь блока АПК</p>
+                </div>
+                <div class="numbers__item swiper-slide"><span class="numbers__item-legend">200</span>
+                  <p class="numbers__item-text">Резидентов в области агро IT</p>
+                </div>
+                <div class="numbers__item swiper-slide"><span class="numbers__item-legend">30 000</span>
+                  <p class="numbers__item-text">Сельхозтоваропроизводителей со всей России и ближнего зарубежья</p>
+                </div>
+                <div class="numbers__item swiper-slide"><img class="numbers__item-icon" src="images/numbers/icon1.svg" alt="">
+                  <p class="numbers__item-text">Обмен опытом цифровизации АПК в регионах</p>
+                </div>
+                <div class="numbers__item swiper-slide"><img class="numbers__item-icon" src="images/numbers/icon2.svg" alt="">
+                  <p class="numbers__item-text">Поиск решения санкционных вызовов</p>
+                </div>
+                <div class="numbers__item swiper-slide"><img class="numbers__item-icon" src="images/numbers/icon3.svg" alt="">
+                  <p class="numbers__item-text">Презентация проектов, готовых к масштабированию в АПК</p>
+                </div>
+              </div>
+              <div class="numbers__slider-pagination swiper-pagination"></div>
             </div>
           </div>
         </section>
@@ -347,6 +353,9 @@
           </div>
         </section>
         <section class="exposure section-indent-padding" id="exposure">
+          <div class="site-container">
+            <p class="exposure__mobile-heading site-second-heading">ЭКСПОЗИЦИЯ</p>
+          </div>
           <div class="site-container exposure__container grid-container">
             <div class="exposure__block">
               <div class="slider-nav exposure__nav">
@@ -512,7 +521,8 @@
               </p><a class="map__link" href="tel:+">
                 <svg class="icon icon-tel map__link-icon" width="24" height="24">
                   <use xlink:href="images/sprites/sprite-mono.svg#tel"></use>
-                </svg>+7 927 492-18-36<span>(Сабиров Радик)</span></a><a class="map__link" href="mailto:kazandigital@mail.ru">
+                </svg>
+                <div class="div">+7 927 492-18-36<span>  (Сабиров Радик)</span></div></a><a class="map__link" href="mailto:kazandigital@mail.ru">
                 <svg class="icon icon-mail map__link-icon" width="24" height="24">
                   <use xlink:href="images/sprites/sprite-mono.svg#mail"></use>
                 </svg>kazandigital@mail.ru</a>
@@ -534,7 +544,7 @@
         <div class="site-container">
           <div class="grid-container">
             <div class="footer__block">
-              <button class="button-reset button"><span class="_border-top"></span><span class="_border-bottom"></span>ЗАРЕГИСТРИРОВАТЬСЯ</button>
+              <button class="button-reset button footer__btn"><span class="_border-top"></span><span class="_border-bottom"></span>ЗАРЕГИСТРИРОВАТЬСЯ</button>
             </div>
             <div class="footer__block">
               <p class="footer__legend">21-24 сентября<br>г. Казань, Международный выставочный комплекс «Kazan Expo»</p>
@@ -560,6 +570,12 @@
               </ul>
             </div>
           </div>
+          <ul class="footer__links _mobile">
+            <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Программа форума</a></li>
+            <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">План выставочной экспозиции</a></li>
+            <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Условия участия в выставке</a></li>
+            <li class="footer__links-wrapper"><a class="footer__nav-link" href="/">Скачать презентацию мероприятия</a></li>
+          </ul>
           <div class="footer__copyright">
             <p class="footer__copyright-txt">Kazan Digital Week © 2022</p><a class="footer__copyright-link" href="/">Design by:<span>Vlad Alyakin</span></a>
           </div>
@@ -567,5 +583,5 @@
       </footer>
     </div>
   </body>
-  <script src="js/main.js?v=0.0.8.3"></script>
+  <script src="js/main.js?v=0.0.8.9"></script>
 </html>

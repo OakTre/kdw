@@ -5,7 +5,9 @@ export default function initMap() {
 
   const maps = Array.from(document.querySelectorAll('.js-map'));
   if (maps) {
-    loadApi('yandex', url, () => { ymaps.ready(init); });
+    if (window.matchMedia("(min-width: 767px)").matches) {
+      loadApi('yandex', url, () => { ymaps.ready(init); });
+    }
   }
 
   function init() {

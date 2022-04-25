@@ -16,19 +16,17 @@ export default () => {
       nextEl: '.js-gallery-btn-next',
       prevEl: '.js-gallery-btn-prev',
     },
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 1.1,
-    //     spaceBetween: 10
-    //   },
-    //   767: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20
-    //   },
-    //   1200: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20
-    //   },
-    // }
+    breakpoints: {
+      280: {
+        slidesPerView: 1.2,
+        spaceBetween: 25,
+        centeredSlides: false,
+        initialSlide: 0,
+      },
+      1200: {
+        slidesPerView: 'auto',
+        spaceBetween: 0
+      },
+    }
   });
 }

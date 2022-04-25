@@ -23,6 +23,14 @@ html {
   @include mq(md) {
     font-size: 7px;
   }
+
+  @include mq(sm) {
+    font-size: 10px;
+  }
+
+  @include mq(custom, max, 300) {
+    font-size: 8px;
+  }
 }
 
 body {
@@ -64,6 +72,11 @@ img {
   @include mq(md) {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  @include mq(sm) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -168,6 +181,9 @@ textarea:focus {
     background: linear-gradient(-90deg, #07D827 0%, rgba(7, 216, 39, 0) 90%);
   }
 
+  @include mq(sm) {
+    background-color: var(--color-light-green);
+  }
 }
 
 a {
@@ -188,6 +204,10 @@ a {
 .site-second-heading {
   font: var(--font-body-1);
   text-transform: uppercase;
+
+  @include mq(sm) {
+    font: 600 2.6rem/3.2rem var(--main-ff);
+  }
 }
 
 .site-third-heading-bold {
@@ -202,10 +222,18 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--offset-32);
+
+  @include mq(sm) {
+    gap: 3.2rem 0;
+  }
 }
 
 .section-indent-padding {
   padding-bottom: 14rem;
+
+  @include mq(sm) {
+    padding-bottom: 6rem;
+  }
 }
 
 .disable-scroll {

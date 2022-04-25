@@ -9,12 +9,30 @@
     &:last-child {
       border: none;
     }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+      border: none;
+      border-bottom: 1px solid #CBCBCB;
+      align-items: stretch;
+      padding-bottom: 3.2rem;
+
+      &:last-child {
+        padding-bottom: 0;
+        border: none;
+      }
+    }
   }
 
   &__item-heading {
     font: 700 6.4rem/1 var(--main-ff);
     margin-bottom: 2rem;
     color: var(--color-dark-green);
+
+    @include mq(sm) {
+      font: 700 4.8rem/5.6rem var(--main-ff);
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__text {

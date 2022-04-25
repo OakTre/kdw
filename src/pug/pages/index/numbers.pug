@@ -1,27 +1,30 @@
 section.numbers.section-indent-padding
   img(src="images/numbers/map.svg" alt="" class="numbers__img")
-  .site-container.numbers__container.grid-container
-    .numbers__item
-      span.numbers__item-legend 1 000
-      p.numbers__item-text
-        | Квадратных метров площадь блока АПК
-    .numbers__item
-      span.numbers__item-legend 200
-      p.numbers__item-text
-        | Резидентов в области агро IT
-    .numbers__item
-      span.numbers__item-legend 30 000
-      p.numbers__item-text
-        | Сельхозтоваропроизводителей со всей России и ближнего зарубежья
-    .numbers__item
-      img(src="images/numbers/icon1.svg" alt="" class="numbers__item-icon")
-      p.numbers__item-text
-        | Обмен опытом цифровизации АПК в регионах
-    .numbers__item
-      img(src="images/numbers/icon2.svg" alt="" class="numbers__item-icon")
-      p.numbers__item-text
-        | Поиск решения санкционных вызовов
-    .numbers__item
-      img(src="images/numbers/icon3.svg" alt="" class="numbers__item-icon")
-      p.numbers__item-text
-        | Презентация проектов, готовых к масштабированию в АПК
+  .site-container
+    .swiper.numbers__slider
+      .swiper-wrapper.grid-container.numbers__container
+        .numbers__item.swiper-slide
+          span.numbers__item-legend 1 000
+          p.numbers__item-text
+            | Квадратных метров площадь блока АПК
+        .numbers__item.swiper-slide
+          span.numbers__item-legend 200
+          p.numbers__item-text
+            | Резидентов в области агро IT
+        .numbers__item.swiper-slide
+          span.numbers__item-legend 30 000
+          p.numbers__item-text
+            | Сельхозтоваропроизводителей со всей России и ближнего зарубежья
+        .numbers__item.swiper-slide
+          img(src="images/numbers/icon1.svg" alt="" class="numbers__item-icon")
+          p.numbers__item-text
+            | Обмен опытом цифровизации АПК в регионах
+        .numbers__item.swiper-slide
+          img(src="images/numbers/icon2.svg" alt="" class="numbers__item-icon")
+          p.numbers__item-text
+            | Поиск решения санкционных вызовов
+        .numbers__item.swiper-slide
+          img(src="images/numbers/icon3.svg" alt="" class="numbers__item-icon")
+          p.numbers__item-text
+            | Презентация проектов, готовых к масштабированию в АПК
+      .numbers__slider-pagination.swiper-pagination

@@ -11,9 +11,21 @@
     justify-content: space-between;
     padding: 8rem 6rem;
 
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 -1.6rem;
+      padding: 4rem 1.6rem;
+    }
+
     p {
       font: var(--font-body-3-700);
       max-width: 71.8rem;
+
+      @include mq(sm) {
+        font: var(--font-body-4-700);
+        margin-bottom: 3.2rem;
+      }
     }
   }
 }

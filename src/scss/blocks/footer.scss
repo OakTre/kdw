@@ -3,6 +3,10 @@
   background-color: var(--color-bg-footer);
   padding: var(--offset-56) 0 var(--offset-60);
 
+  @include mq(sm) {
+    padding: 4rem 0 3.2rem;
+  }
+
   &__block {
     &:nth-child(1) {
       grid-column: 3 span;
@@ -15,22 +19,53 @@
     &:nth-child(3) {
       grid-column: 2 span;
     }
+
+    @include mq(sm) {
+      grid-column: 12 span !important;
+    }
+  }
+
+  &__btn {
+    @include mq(sm) {
+      width: 100%;
+    }
   }
 
   &__legend {
     font: var(--font-body-5-700);
     margin-bottom: 3.2rem;
     text-transform: uppercase;
+
+    @include mq(sm) {
+      margin-bottom: 0;
+    }
   }
 
   &__links {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1rem var(--offset-32);
+
+    ._mobile {
+      display: none;
+    }
+
+    @include mq(sm) {
+      display: none;
+
+      &._mobile {
+        display: grid;
+        margin-top: 3.2rem;
+      }
+    }
   }
 
   &__links-wrapper {
     grid-column: 3 span;
+
+    @include mq(sm) {
+      grid-column: 7 span;
+    }
   }
 
   &__nav-link {
@@ -58,6 +93,10 @@
     &:active {
       color: var(--color-dark-green);
     }
+
+    @include mq(sm) {
+      margin-top: 1.2rem;
+    }
   }
 
   &__chief {
@@ -78,11 +117,20 @@
     padding-top: 2.4rem;
     margin-top: 4rem;
     border-top: 1px solid var(--color-border);
+
+    @include mq(sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__copyright-txt {
     font: var(--font-body-7);
     color: var(--color-grey);
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__copyright-link {

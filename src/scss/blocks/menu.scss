@@ -14,9 +14,20 @@
     transform: translateY(0);
   }
 
+  @include mq(sm) {
+    padding-top: 8.2rem;
+  }
+
   &__container {
     padding-top: 18.6rem;
     padding-bottom: 4rem;
+
+    @include mq(sm) {
+      overflow: auto;
+      height: 100%;
+      padding-top: 0;
+      gap: 4rem 0;
+    }
   }
 
   &__container-block {
@@ -27,6 +38,10 @@
     &:nth-child(2) {
       grid-column: 4 span;
     }
+
+    @include mq(sm) {
+      grid-column: 12 span !important;
+    }
   }
 
   &__item {
@@ -34,6 +49,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.6rem;
     }
   }
 
@@ -48,6 +67,10 @@
     &:active {
       color: var(--color-dark-green);
     }
+
+    @include mq(sm) {
+      font: var(--font-body-3-600);
+    }
   }
 
   &__content-block {
@@ -58,6 +81,10 @@
 
     &:nth-last-of-type(1) {
       margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 2.4rem;
     }
   }
 

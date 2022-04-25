@@ -1,4 +1,13 @@
 .exposure {
+  &__mobile-heading {
+    display: none;
+    margin-bottom: 3.2rem;
+
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
   &__block {
     position: relative;
     min-width: 0;
@@ -11,6 +20,10 @@
     &:nth-child(2) {
       grid-column: 5 span;
     }
+
+    @include mq(sm) {
+      grid-column: 12 span !important;
+    }
   }
 
   &__nav {
@@ -22,6 +35,10 @@
     height: 42rem;
     display: block;
     object-fit: cover;
+
+    @include mq(sm) {
+      height: 18.4rem;
+    }
   }
 
   &__content {
@@ -34,6 +51,10 @@
       font: var(--font-body-1);
       text-transform: uppercase;
       margin-bottom: var(--offset-32);
+
+      @include mq(sm) {
+        display: none;
+      }
     }
   }
 
@@ -42,6 +63,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include mq(sm) {
+      margin-top: 3.2rem;
+    }
   }
 
   &__link {
@@ -57,6 +82,10 @@
     &:hover,
     &:focus {
       color: var(--color-light-green);
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
     }
   }
 

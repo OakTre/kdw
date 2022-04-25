@@ -2,16 +2,39 @@
   position: relative;
   padding: 14rem 0;
 
+  @include mq(sm) {
+    padding: 6rem 0;
+    background-image: url(../images/numbers/map.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 68rem 35rem;
+  }
+
   &__img {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+
+    @include mq(sm) {
+      right: 5%;
+      left: auto;
+      transform: none;
+      width: 60.8rem;
+      height: 35rem;
+      object-fit: cover;
+      display: none;
+    }
   }
 
   &__container {
     gap: 8rem var(--offset-32);
+
+    @include mq(sm) {
+      display: flex;
+      gap: 0;
+    }
   }
 
   &__item {
@@ -24,10 +47,20 @@
     font: 700 6.4rem/1 var(--main-ff);
     margin-bottom: 2rem;
     color: var(--color-dark-green);
+
+
+    @include mq(sm) {
+      font: 700 4.8rem/5.6rem var(--main-ff);
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__item-text {
     max-width: 25rem;
+
+    // @include mq(sm) {
+    //   max-width: 100%;
+    // }
   }
 
   &__item-icon {
@@ -36,5 +69,23 @@
     height: 7rem;
     object-fit: cover;
     margin-bottom: 3.1rem;
+
+    @include mq(sm) {
+      height: 5rem;
+      width: 5rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__slider-pagination {
+    position: static;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin-top: 1rem;
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--color-dark-green);
+    }
   }
 }

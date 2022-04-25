@@ -4,6 +4,10 @@
   &__heading {
     margin-bottom: 6rem;
     color: var(--color-white);
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__list {
@@ -13,6 +17,12 @@
       .partners__item {
         &:nth-child(n + 9) {
           display: flex;
+        }
+
+        @include mq(sm) {
+          &:nth-child(n + 4) {
+            display: flex;
+          }
         }
       }
     }
@@ -38,7 +48,9 @@
     }
 
     &:hover {
-      transform: translateY(-1rem);
+      @include mq(sm, min) {
+        transform: translateY(-1rem);
+      }
 
       img {
         filter: none;
@@ -47,6 +59,14 @@
 
     &:nth-child(n + 9) {
       display: none;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
     }
   }
 
@@ -71,6 +91,10 @@
       ._show {
         display: none;
       }
+    }
+
+    @include mq(sm) {
+      margin-top: 3.2rem;
     }
   }
 }

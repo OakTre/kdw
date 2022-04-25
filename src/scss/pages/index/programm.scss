@@ -18,10 +18,19 @@
       font: var(--font-body-1);
       text-transform: uppercase;
       margin-bottom: var(--offset-32);
+
+      @include mq(sm) {
+        font: 700 2.6rem/3.2rem var(--main-ff);
+        margin-bottom: 3.2rem;
+      }
     }
 
     p {
       color: var(--color-white);
+
+      @include mq(sm) {
+        font: var(--font-body-6);
+      }
     }
   }
 
@@ -33,16 +42,30 @@
     &:nth-child(2) {
       grid-column: 7 span;
     }
+
+    @include mq(sm) {
+      grid-column: 12 span !important;
+    }
   }
 
   &__themes {
+    position: relative;
     width: 100%;
     padding: 5.6rem;
     background-color: var(--color-bg2);
 
+    @include mq(sm) {
+      padding: 3.2rem 1.6rem;
+      padding-bottom: 8.8rem;
+    }
+
     p {
       font: var(--font-body-4-700);
       margin-bottom: 3.2rem;
+
+      @include mq(sm) {
+        margin-bottom: 2.4rem;
+      }
     }
 
     ul {
@@ -54,6 +77,12 @@
         font: var(--font-body-4-400);
         margin-bottom: 2.5rem;
         color: var(--color-grey);
+
+        @include mq(sm) {
+          font: var(--font-body-5-400);
+          margin-bottom: 1.2rem;
+          padding-left: 3.8rem;
+        }
 
         &::before {
           position: absolute;
@@ -72,5 +101,13 @@
 
   &__themes-btn {
     margin-top: var(--offset-32);
+
+    @include mq(sm) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
   }
 }

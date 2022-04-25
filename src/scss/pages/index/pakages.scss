@@ -10,6 +10,10 @@
     height: 35.1rem;
     background-color: var(--color-dark);
     content: "";
+
+    @include mq(sm) {
+      height: 50.9rem;
+    }
   }
 
 
@@ -22,7 +26,18 @@
     transition: transform var(--transition);
 
     &:hover {
-      transform: translateY(-2rem);
+      @include mq(sm, min) {
+        transform: translateY(-2rem);
+      }
+    }
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+      min-height: 30.8rem;
     }
   }
 

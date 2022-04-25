@@ -1,6 +1,10 @@
 .gallery {
   &__container {
     overflow: hidden;
+
+    @include mq(sm) {
+      display: block;
+    }
   }
 
   .site-container {
@@ -35,6 +39,10 @@
     .swiper-wrapper {
       height: 52rem;
       align-items: center;
+
+      @include mq(sm) {
+        height: auto;
+      }
     }
   }
 
@@ -50,6 +58,14 @@
       height: 52rem;
       z-index: 2;
       opacity: 1;
+
+      @include mq(sm) {
+        height: auto;
+      }
+    }
+
+    @include mq(sm) {
+      height: 18.4rem !important;
     }
   }
 }
