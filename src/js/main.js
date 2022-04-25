@@ -11,6 +11,7 @@ import fixedHeader from './modules/fixedHeader';
 import anchorLInks from './modules/anchorLInks.js';
 import openMenu from './modules/openMenu.js';
 import numberMobileSlider from './modules/numberMobileSlider.js';
+import sectionAnimation from './modules/sectionAnimation.js';
 
 documenReady(() => {
   lazyIMages();
@@ -23,4 +24,5 @@ documenReady(() => {
   anchorLInks();
   openMenu();
   numberMobileSlider();
+  sectionAnimation();
 });

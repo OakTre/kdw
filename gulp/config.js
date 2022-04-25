@@ -11,6 +11,7 @@ const config = {
     iconsMono: `${srcPath}/assets/icons/mono`,
     iconsMulti: `${srcPath}/assets/icons/multi`,
     favicon: `${srcPath}/assets/favicon`,
+    video: `${srcPath}/assets/vids`,
     pug: `${srcPath}/pug`,
   },
 
@@ -22,6 +23,7 @@ const config = {
     fonts: `${destPath}/fonts`,
     images: `${destPath}/images`,
     favicon: `${destPath}/assets/favicon`,
+    video: `${destPath}/assets/vids`,
   },
 
   setEnv() {

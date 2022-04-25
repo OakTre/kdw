@@ -244,3 +244,13 @@ a {
   top: 0;
   width: 100%;
 }
+
+.js-animated-heading {
+  > div {
+    overflow: hidden;
+  }
+}
+
+.line {
+  overflow: hidden;
+}

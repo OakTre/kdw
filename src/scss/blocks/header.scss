@@ -136,11 +136,41 @@
     margin-left: 10.4rem;
 
     span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: block;
       width: 3.5rem;
       height: 0.3rem;
       background-color: var(--color-white);
-      transition: background-color var(--transition);
+      transition: background-color var(--transition), top var(--transition), transform var(--transition);
+
+      &:nth-child(1) {
+        top: 30%;
+      }
+
+      &:nth-child(3) {
+        top: 70%;
+      }
+    }
+
+    &.is-active {
+      span {
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(1) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
     }
 
     &:hover {

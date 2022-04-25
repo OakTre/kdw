@@ -9,6 +9,7 @@ export default() => {
   window.flag = flag;
 
   menuOpenBtn.addEventListener("click", ()=>{
+    menuOpenBtn.classList.toggle("is-active");
     menu.classList.toggle("is-active");
     header.classList.toggle("menu-is-opened");
 
