@@ -1,0 +1,126 @@
+-
+  let types = [
+    {
+      inputValue: "speeker",
+      icon: "man",
+      name: "Стать спикером деловой программы",
+    },
+    {
+      inputValue: "exhibitor",
+      icon: "building",
+      name: "Регистрация в качестве экспонента",
+    },
+    {
+      inputValue: "guest",
+      icon: "men",
+      name: "Регистрация в качестве гостя",
+    }
+  ]
+
+  let fields = [
+    {
+      labelName: "Наименование компании",
+      inputName: "company-name",
+      type: "text",
+      placeholder: "ОАО Моя компания",
+    },
+    {
+      labelName: "Контактное лицо",
+      inputName: "name",
+      type: "text",
+      placeholder: "Иванов Иван Иванович",
+    },
+    {
+      labelName: "Контактный телефон",
+      inputName: "tel",
+      type: "tel",
+      placeholder: "+7 (ХХХ) ХХХ ХХ ХХ",
+    },
+    {
+      labelName: "E-mail",
+      inputName: "email",
+      type: "email",
+      placeholder: "example@mail.com",
+    },
+    {
+      labelName: "Должность",
+      inputName: "position",
+      type: "text",
+      placeholder: "напр. Генеральный директор",
+    },
+    {
+      labelName: "Веб –сайт",
+      inputName: "web-site",
+      type: "text",
+      placeholder: "www.example.com",
+    },
+    {
+      labelName: "Предварительный размер экспозиции",
+      inputName: "exposure-size",
+      placeholder: "Необходимо выбрать",
+      select: true
+    },
+    {
+      labelName: "Веб–сайт",
+      inputName: "company-sphere",
+      placeholder: "Необходимо выбрать",
+      select: true
+    },
+  ]
+
+.modal__container.modal-pet__container.js-modal-pet(data-target="registration")
+  .modal__content.site-container
+    button.button-reset.modal__close-btn.modal-close
+      span
+      span
+    .registration
+      .registration-type
+        .registration-type__heading.registration__heading Регистрация участия
+        .registration-type__text
+          | Зарегистрируйтесь, если у Вас остались вопросы, пожалуйста
+          a(href="tel:+7")
+            |   свяжитесь с нами
+        .registration-type__list
+          for item in types
+            label.registration-type__item
+              input(type="radio" name="type" value=item.inputValue class="visually-hidden")
+              span._layer
+              +icon-mono(`${item.icon}`)(width="50" height="50" class="registration-type__item-icon")
+              .registration-type__item-legend= item.name
+              p.registration-type__item-text 21-24 сентября
+              p.registration-type__item-text Международный выставочный комплекс «Kazan Expo»
+        button.button-reset.registration-type__btn.registration__btn.disabled Продолжить
+      form.registration-form
+        .registration-form__heading.registration__heading Регистрация в качестве экспонента
+        .registration-form__container
+          for field in fields
+            if (field.select)
+              label.registration-form__label
+                span.registration-form__label-name._required= field.labelName
+                .custom-select
+                  select(name=field.inputName class="js-custom-select")
+                    option(placeholder=field.placeholder)= field.placeholder
+                    option(value="first") first
+                    option(value="second") second
+            else
+              label.registration-form__label
+                span.registration-form__label-name._required= field.labelName
+                input.registration-form__input.input(type=field.type name=field.inputName placeholder=field.placeholder)
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="argeement" value="yes" class="visually-hidden")
+            p
+              | Я принимаю
+              a(href="/")
+                | Условия использования
+              | для пользователей
+              | и
+              a(href="/")
+                | Политику по защите персональных данных
+              | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden")
+            p
+              | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
+        .registration-form__btns
+          button.button-reset.registration__btn._transparent(type="button") Назад
+          button.button-reset.registration__btn(type="submit") Зарегистрироваться

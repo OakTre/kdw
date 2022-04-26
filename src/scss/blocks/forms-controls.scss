@@ -1,0 +1,19 @@
+.input {
+  height: 4.4rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  font: var(--font-body-6);
+  background-color: var(--color-white);
+  border: 1px solid #EAEAEA;
+  border-radius: 0;
+  outline: none;
+
+  &::placeholder {
+    font: var(--font-body-6);
+    color: var(--color-grey);
+  }
+
+  @include mq(sm) {
+    padding: 1.2re,;
+  }
+}

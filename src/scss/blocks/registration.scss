@@ -1,0 +1,329 @@
+.registration {
+  height: 100%;
+
+  &__heading {
+    font: var(--font-body-4-700);
+
+    @include mq(sm) {
+      font: var(--font-body-5-700);
+    }
+  }
+
+  &__btn {
+    padding: 1.5rem 2.3rem;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border: 1px solid var(--color-dark-green);
+    text-transform: uppercase;
+    transition: color var(--transition), background-color var(--transition), transform var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-dark-green);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &.disabled {
+      pointer-events: none;
+      background-color: #CDCDCD;
+      border-color: #CDCDCD;
+    }
+
+    &._transparent {
+      background-color: var(--color-white);
+      color: var(--color-dark-green);
+
+      &:hover {
+        background-color: var(--color-dark-green);
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.registration-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__heading {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 43.6rem;
+    margin: 0 auto 4rem auto;
+
+    @include mq(sm) {
+      font: var(--font-body-6);
+      margin: 0 auto 2rem auto;
+    }
+
+    a {
+      color: var(--color-dark-green);
+      display: inline-block;
+      padding-left: 0.4rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--offset-32);
+    align-self: stretch;
+
+    @include mq(sm) {
+      gap: 1.2rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 span;
+    padding: 3.2rem;
+    border: 1px solid #EAEAEA;
+    min-height: 32rem;
+    cursor: pointer;
+
+    input:checked {
+      ~._layer {
+        background-color: var(--color-dark-green);
+      }
+
+      ~.icon {
+        fill: var(--color-white);
+      }
+
+      ~.registration-type__item-legend {
+        color: var(--color-white);
+      }
+
+      ~.registration-type__item-text {
+        color: rgba($color: #fff, $alpha: 0.6);
+      }
+    }
+
+    ._layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: background-color var(--transition);
+      content: "";
+    }
+
+    &:hover {
+      ._layer {
+        background-color: var(--color-dark-green);
+      }
+
+      .icon {
+        fill: var(--color-white);
+      }
+
+      .registration-type__item-legend {
+        color: var(--color-white);
+      }
+
+      .registration-type__item-text {
+        color: rgba($color: #fff, $alpha: 0.6);
+      }
+    }
+
+    @include mq(sm) {
+      grid-column: 6 span;
+      min-height: 14.4rem;
+      padding: 2rem 1.6rem;
+    }
+  }
+
+  &__item-icon {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.2rem;
+    fill: var(--color-dark-green);
+    transition: fill var(--transition);
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__item-legend {
+    text-align: center;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+    transition: color var(--transition);
+
+    @include mq(sm) {
+      font: var(--font-body-6);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__item-text {
+    text-align: center;
+    font: var(--font-body-6);
+    margin-bottom: 0.4rem;
+    color: var(--color-grey);
+    transition: color var(--transition);
+
+    @include mq(sm) {
+      font: var(--font-body-7);
+    }
+  }
+
+  &__btn {
+    margin-top: 4rem;
+    margin-left: auto;
+
+    @include mq(sm) {
+      margin: 2rem 0 0;
+      width: 100%;
+    }
+  }
+}
+
+.registration-form {
+  &__heading {
+    margin-bottom: 5.6rem;
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2.4rem 3.2rem;
+
+    @include mq(sm) {
+      gap: 1.6rem 0;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    grid-column: 4 span;
+
+    @include mq(sm) {
+      grid-column: 10 span;
+    }
+  }
+
+  &__label-name {
+    position: relative;
+    display: block;
+    font: var(--font-body-6);
+    margin-bottom: 1.2rem;
+
+    @include mq(sm) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__argeement {
+    grid-column: 8 span;
+    position: relative;
+    cursor: pointer;
+
+    @include mq(sm) {
+      grid-column: 10 span;
+    }
+
+    input:checked {
+      ~p {
+        &::before {
+          background-color: var(--color-dark-green);
+        }
+      }
+    }
+
+    p {
+      position: relative;
+      padding-left: 2.8rem;
+      font: var(--font-body-7);
+
+      a {
+        color: var(--color-dark-green);
+        padding: 0 0.4rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 1px solid var(--color-dark-green);
+        transition: background-color var(--transition);
+        content: "";
+      }
+
+      &::after {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.4rem;
+        width: 0.8rem;
+        height: 0.5rem;
+        border-bottom: 2px solid var(--color-white);
+        border-left: 2px solid var(--color-white);
+        transform: rotate(-45deg);
+        content: "";
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      gap: 1rem 0;
+      margin-top: 3rem;
+
+      button[type=button] {
+        order: 2;
+      }
+
+      button[type=submit] {
+        order: 1;
+      }
+
+    }
+  }
+}

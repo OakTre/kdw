@@ -254,3 +254,16 @@ a {
 .line {
   overflow: hidden;
 }
+
+.js-anim-fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+}
+
+.fade-out {
+  opacity: 1;
+  visibility: inherit;
+  transition: opacity .4s,visibility .4s,transform .4s ease-out;
+  transform: translateY(0);
+}

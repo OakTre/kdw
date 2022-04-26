@@ -12,6 +12,9 @@ import anchorLInks from './modules/anchorLInks.js';
 import openMenu from './modules/openMenu.js';
 import numberMobileSlider from './modules/numberMobileSlider.js';
 import sectionAnimation from './modules/sectionAnimation.js';
+import revealBlocks from './modules/revealBlocks.js';
+import initModal from './modules/initModal.js';
+import initSelect from './modules/initSelect';
 
 documenReady(() => {
   lazyIMages();
@@ -25,4 +28,7 @@ documenReady(() => {
   openMenu();
   numberMobileSlider();
   sectionAnimation();
+  revealBlocks();
+  initModal();
+  initSelect();
 });

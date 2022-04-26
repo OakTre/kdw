@@ -16,6 +16,7 @@ export default function anchorLinks() {
     if (elementToScroll) {
       if (header.classList.contains("menu-is-opened") && window.flag === true) {
         header.classList.remove("menu-is-opened");
+        header.querySelector('.header__burger-btn').classList.remove("is-active");
         menu.classList.remove("is-active");
 
         enableScroll();

@@ -10,8 +10,8 @@
 
 section.forum.section-indent-padding(id="about")
   .site-container.forum__container
-    h2.forum__heading.site-second-heading.js-animated-heading Форум для
-    ul.forum__list.grid-container
+    h2.forum__heading.site-second-heading.js-animated-heading(data-intersection-ratio="0.25") Форум для
+    ul.forum__list.grid-container.js-anim-fade-out
       for item, index in arr
         li.forum__item
           +icon-mono(`forum-img${index}`)(class="forum__item-img")
