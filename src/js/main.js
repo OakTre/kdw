@@ -16,6 +16,7 @@ import revealBlocks from './modules/revealBlocks.js';
 import initModal from './modules/initModal.js';
 import initSelect from './modules/initSelect';
 import startingAnimation from './modules/startingAnimation.js';
+import programAnimation from './modules/programAnimation.js';
 
 window.addEventListener("load", ()=>{
   setTimeout(() => {
@@ -38,4 +39,5 @@ documenReady(() => {
   revealBlocks();
   initModal();
   initSelect();
+  programAnimation();
 });
