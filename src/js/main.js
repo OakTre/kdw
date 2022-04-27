@@ -15,6 +15,13 @@ import sectionAnimation from './modules/sectionAnimation.js';
 import revealBlocks from './modules/revealBlocks.js';
 import initModal from './modules/initModal.js';
 import initSelect from './modules/initSelect';
+import startingAnimation from './modules/startingAnimation.js';
+
+window.addEventListener("load", ()=>{
+  setTimeout(() => {
+    startingAnimation();
+  }, 200);
+});
 
 documenReady(() => {
   lazyIMages();

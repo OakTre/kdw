@@ -18,6 +18,8 @@ export default function initMap() {
 
     const mapElement = document.querySelector(".js-map");
 
+    if (!mapElement) return;
+
     const coords = mapElement.hasAttribute("data-coords")
       ? mapElement.getAttribute("data-coords").split(",")
       : [];
