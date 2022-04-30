@@ -137,6 +137,10 @@
     @include mq(md) {
       margin-top: 14rem;
     }
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 
   &__nubmers-separator {
