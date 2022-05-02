@@ -590,7 +590,7 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__container modal-pet__container js-modal-pet" data-target="registration">
+      <div class="modal__container modal-pet__container js-modal-registrtion" data-target="registration">
         <div class="modal__content site-container">
           <button class="button-reset modal__close-btn modal-close"><span></span><span></span></button>
           <div class="registration">
@@ -599,7 +599,7 @@
               <div class="registration-type__text">Зарегистрируйтесь, если у Вас остались вопросы, пожалуйста<a href="tel:+7">  свяжитесь с нами</a></div>
               <div class="registration-type__list">
                 <label class="registration-type__item">
-                  <input class="visually-hidden" type="radio" name="type" value="speeker"><span class="_layer"></span>
+                  <input class="visually-hidden js-registration-label" type="radio" name="type" value="speeker"><span class="_layer"></span>
                   <svg class="icon icon-man registration-type__item-icon" width="50" height="50">
                     <use xlink:href="images/sprites/sprite-mono.svg#man"></use>
                   </svg>
@@ -608,7 +608,7 @@
                   <p class="registration-type__item-text">Международный выставочный комплекс «Kazan Expo»</p>
                 </label>
                 <label class="registration-type__item">
-                  <input class="visually-hidden" type="radio" name="type" value="exhibitor"><span class="_layer"></span>
+                  <input class="visually-hidden js-registration-label" type="radio" name="type" value="exhibitor"><span class="_layer"></span>
                   <svg class="icon icon-building registration-type__item-icon" width="50" height="50">
                     <use xlink:href="images/sprites/sprite-mono.svg#building"></use>
                   </svg>
@@ -617,7 +617,7 @@
                   <p class="registration-type__item-text">Международный выставочный комплекс «Kazan Expo»</p>
                 </label>
                 <label class="registration-type__item">
-                  <input class="visually-hidden" type="radio" name="type" value="guest"><span class="_layer"></span>
+                  <input class="visually-hidden js-registration-label" type="radio" name="type" value="guest"><span class="_layer"></span>
                   <svg class="icon icon-men registration-type__item-icon" width="50" height="50">
                     <use xlink:href="images/sprites/sprite-mono.svg#men"></use>
                   </svg>
@@ -628,58 +628,196 @@
               </div>
               <button class="button-reset registration-type__btn registration__btn disabled">Продолжить</button>
             </div>
-            <form class="registration-form">
+            <form class="registration-form" data-need-validation data-form-name="exhibitor">
+              <div class="registration__form-legend">заявка участия в&nbsp;форуме</div>
               <div class="registration-form__heading registration__heading">Регистрация в качестве экспонента</div>
               <div class="registration-form__container">
                 <label class="registration-form__label"><span class="registration-form__label-name _required">Наименование компании</span>
-                  <input class="registration-form__input input" type="text" name="company-name" placeholder="ОАО Моя компания">
+                  <input class="registration-form__input input" type="text" name="company-name" placeholder="ОАО Моя компания" data-parsley-required>
                 </label>
                 <label class="registration-form__label"><span class="registration-form__label-name _required">Контактное лицо</span>
-                  <input class="registration-form__input input" type="text" name="name" placeholder="Иванов Иван Иванович">
+                  <input class="registration-form__input input" type="text" name="name" placeholder="Иванов Иван Иванович" data-parsley-required>
                 </label>
                 <label class="registration-form__label"><span class="registration-form__label-name _required">Контактный телефон</span>
-                  <input class="registration-form__input input" type="tel" name="tel" placeholder="+7 (ХХХ) ХХХ ХХ ХХ">
+                  <input class="registration-form__input input js-phone-mask" type="tel" name="tel" placeholder="+7 (ХХХ) ХХХ ХХ ХХ" data-parsley-phone data-parsley-required>
                 </label>
                 <label class="registration-form__label"><span class="registration-form__label-name _required">E-mail</span>
-                  <input class="registration-form__input input" type="email" name="email" placeholder="example@mail.com">
+                  <input class="registration-form__input input" type="email" name="email" placeholder="example@mail.com" data-parsley-required>
                 </label>
                 <label class="registration-form__label"><span class="registration-form__label-name _required">Должность</span>
-                  <input class="registration-form__input input" type="text" name="position" placeholder="напр. Генеральный директор">
+                  <input class="registration-form__input input" type="text" name="position" placeholder="напр. Генеральный директор" data-parsley-required>
                 </label>
-                <label class="registration-form__label"><span class="registration-form__label-name _required">Веб –сайт</span>
-                  <input class="registration-form__input input" type="text" name="web-site" placeholder="www.example.com">
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Веб–сайт</span>
+                  <input class="registration-form__input input" type="url" name="web-site" placeholder="www.example.com" data-parsley-url data-parsley-required>
                 </label>
-                <label class="registration-form__label"><span class="registration-form__label-name _required">Предварительный размер экспозиции</span>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Основная сфера деятельности Вашей компании</span>
                   <div class="custom-select">
-                    <select class="js-custom-select" name="exposure-size">
-                      <option placeholder="Необходимо выбрать">Необходимо выбрать</option>
+                    <select class="js-custom-select" name="company-sphere" data-parsley-required>
+                      <option value="">Необходимо выбрать</option>
                       <option value="first">first</option>
                       <option value="second">second</option>
                     </select>
                   </div>
                 </label>
-                <label class="registration-form__label"><span class="registration-form__label-name _required">Веб–сайт</span>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Предварительный размер экспозиции</span>
                   <div class="custom-select">
-                    <select class="js-custom-select" name="company-sphere">
-                      <option placeholder="Необходимо выбрать">Необходимо выбрать</option>
+                    <select class="js-custom-select" name="exposure-size" data-parsley-required>
+                      <option value="">Необходимо выбрать</option>
                       <option value="first">first</option>
                       <option value="second">second</option>
                     </select>
                   </div>
                 </label>
                 <label class="registration-form__label registration-form__argeement">
-                  <input class="visually-hidden" type="checkbox" name="argeement" value="yes">
+                  <input class="visually-hidden" type="checkbox" name="argeement" value="yes" data-parsley-required>
                   <p>Я принимаю<a href="/">Условия использования</a>для пользователей
                     и<a href="/">Политику по защите персональных данных</a>организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
                   </p>
                 </label>
                 <label class="registration-form__label registration-form__argeement">
-                  <input class="visually-hidden" type="checkbox" name="subcribe" value="yes">
+                  <input class="visually-hidden" type="checkbox" name="subcribe" value="yes" data-parsley-required>
                   <p>Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время</p>
                 </label>
               </div>
               <div class="registration-form__btns">
-                <button class="button-reset registration__btn _transparent" type="button">Назад</button>
+                <button class="button-reset registration__btn _transparent js-registration-btn-back" type="button">Назад</button>
+                <button class="button-reset registration__btn" type="submit">Зарегистрироваться</button>
+              </div>
+            </form>
+            <form class="registration-form" data-need-validation data-form-name="guest">
+              <div class="registration__form-legend">заявка участия в&nbsp;форуме</div>
+              <div class="registration-form__heading registration__heading">Регистрация в качестве гостя</div>
+              <div class="registration-form__text">Дает право получить билет на посщениее экспозиции форума и деловой программы</div>
+              <div class="registration-form__container">
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Фамилия</span>
+                  <input class="registration-form__input input" type="text" name="second-name" placeholder="Иванов" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Имя</span>
+                  <input class="registration-form__input input" type="text" name="name" placeholder="Иван" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name">Отчество</span>
+                  <input class="registration-form__input input" type="text" name="third-name" placeholder="Иванович">
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Наименование компании</span>
+                  <input class="registration-form__input input" type="text" name="company-name" placeholder="ОАО Моя компания" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">E-mail</span>
+                  <input class="registration-form__input input" type="email" name="email" placeholder="example@mail.com" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Контактный телефон</span>
+                  <input class="registration-form__input input js-phone-mask" type="tel" name="tel" placeholder="+7 (ХХХ) ХХХ ХХ ХХ" data-parsley-phone data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name">Веб–сайт</span>
+                  <input class="registration-form__input input" type="url" name="web-site" placeholder="www.example.com" data-parsley-url>
+                </label>
+                <label class="registration-form__label is-empty"></label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Страна / Регион</span>
+                  <div class="custom-select">
+                    <select class="js-custom-select" name="country/region" data-parsley-required>
+                      <option value="">Необходимо выбрать</option>
+                      <option value="first">first</option>
+                      <option value="second">second</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Город</span>
+                  <input class="registration-form__input input" type="text" name="city" placeholder="Казань" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name">Ваша должность</span>
+                  <input class="registration-form__input input" type="text" name="position" placeholder="напр. Генеральный директор">
+                </label>
+                <label class="registration-form__label registration-form__argeement">
+                  <input class="visually-hidden" type="checkbox" name="argeement" value="yes" data-parsley-required>
+                  <p>Я принимаю<a href="/">Условия использования</a>для пользователей
+                    и<a href="/">Политику по защите персональных данных</a>организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
+                  </p>
+                </label>
+                <label class="registration-form__label registration-form__argeement">
+                  <input class="visually-hidden" type="checkbox" name="subcribe" value="yes" data-parsley-required>
+                  <p>Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время</p>
+                </label>
+              </div>
+              <div class="registration-form__btns">
+                <button class="button-reset registration__btn _transparent js-registration-btn-back" type="button">Назад</button>
+                <button class="button-reset registration__btn" type="submit">Зарегистрироваться</button>
+              </div>
+            </form>
+            <form class="registration-form" data-need-validation data-form-name="speeker">
+              <div class="registration__form-legend">заявка участия в&nbsp;форуме</div>
+              <div class="registration-form__heading registration__heading">Регистрация в качестве спикера</div>
+              <div class="registration-form__container">
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Фамилия</span>
+                  <input class="registration-form__input input" type="text" name="second-name" placeholder="Иванов" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Имя</span>
+                  <input class="registration-form__input input" type="text" name="name" placeholder="Иван" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name">Отчество</span>
+                  <input class="registration-form__input input" type="text" name="third-name" placeholder="Иванович">
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Наименование компании</span>
+                  <input class="registration-form__input input" type="text" name="company-name" placeholder="ОАО Моя компания" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">E-mail</span>
+                  <input class="registration-form__input input" type="email" name="email" placeholder="example@mail.com" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Контактный телефон</span>
+                  <input class="registration-form__input input js-phone-mask" type="tel" name="tel" placeholder="+7 (ХХХ) ХХХ ХХ ХХ" data-parsley-phone data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Веб–сайт</span>
+                  <input class="registration-form__input input" type="url" name="web-site" placeholder="www.example.com" data-parsley-url data-parsley-required>
+                </label>
+                <label class="registration-form__label is-empty"></label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Страна / Регион</span>
+                  <div class="custom-select">
+                    <select class="js-custom-select" name="country" data-parsley-required>
+                      <option value="">Необходимо выбрать</option>
+                      <option value="first">first</option>
+                      <option value="second">second</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Город</span>
+                  <input class="registration-form__input input" type="text" name="city" placeholder="Казань" data-parsley-required>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Ваша должность</span>
+                  <input class="registration-form__input input" type="text" name="position" placeholder="напр. Генеральный директор" data-parsley-required>
+                </label>
+                <label class="registration-form__label is-empty"></label>
+                <label class="registration-form__label"><span class="registration-form__label-name _required">Планирую принять участие в</span>
+                  <div class="custom-select">
+                    <select class="js-custom-select" name="programm" data-parsley-required>
+                      <option value="">Список тем деловой программы</option>
+                      <option value="first">first</option>
+                      <option value="second">second</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="registration-form__label"><span class="registration-form__label-name">Блок секции</span>
+                  <div class="custom-select">
+                    <select class="js-custom-select" name="block">
+                      <option value="">Выберите блок секции</option>
+                      <option value="first">first</option>
+                      <option value="second">second</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="registration-form__label _textarea"><span class="registration-form__label-name">Краткое описание тематики выступления</span>
+                  <textarea class="registration-form__textarea" placeholder="Опишите Ваше выступление" name="description"></textarea>
+                </label>
+                <label class="registration-form__label registration-form__argeement">
+                  <input class="visually-hidden" type="checkbox" name="argeement" value="yes" data-parsley-required>
+                  <p>Я принимаю<a href="/">Условия использования</a>для пользователей
+                    и<a href="/">Политику по защите персональных данных</a>организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
+                  </p>
+                </label>
+                <label class="registration-form__label registration-form__argeement">
+                  <input class="visually-hidden" type="checkbox" name="subcribe" value="yes" data-parsley-required>
+                  <p>Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время</p>
+                </label>
+              </div>
+              <div class="registration-form__btns">
+                <button class="button-reset registration__btn _transparent js-registration-btn-back" type="button">Назад</button>
                 <button class="button-reset registration__btn" type="submit">Зарегистрироваться</button>
               </div>
             </form>

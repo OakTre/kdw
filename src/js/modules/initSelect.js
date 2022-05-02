@@ -14,5 +14,14 @@ export default function initSelects() {
 				allowHTML: true,
       });
     });
+
+    customSelects.forEach(select => {
+      select.addEventListener("change", ()=> {
+        if (select.classList.contains("parsley-error")) {
+          select.classList.remove("parsley-error");
+          select.closest(".custom-select").querySelector("ul.parsley-errors-list").innerHTML = "";
+        }
+      });
+    })
   }
 };

@@ -23,52 +23,228 @@
       inputName: "company-name",
       type: "text",
       placeholder: "ОАО Моя компания",
+      req: true,
     },
     {
       labelName: "Контактное лицо",
       inputName: "name",
       type: "text",
       placeholder: "Иванов Иван Иванович",
+      req: true,
     },
     {
       labelName: "Контактный телефон",
       inputName: "tel",
       type: "tel",
       placeholder: "+7 (ХХХ) ХХХ ХХ ХХ",
+      req: true,
     },
     {
       labelName: "E-mail",
       inputName: "email",
       type: "email",
       placeholder: "example@mail.com",
+      req: true,
     },
     {
       labelName: "Должность",
       inputName: "position",
       type: "text",
       placeholder: "напр. Генеральный директор",
+      req: true,
     },
     {
-      labelName: "Веб –сайт",
+      labelName: "Веб–сайт",
       inputName: "web-site",
-      type: "text",
+      type: "url",
       placeholder: "www.example.com",
+      req: true,
+    },
+    {
+      labelName: "Основная сфера деятельности Вашей компании",
+      inputName: "company-sphere",
+      placeholder: "Необходимо выбрать",
+      select: true,
+      req: true,
     },
     {
       labelName: "Предварительный размер экспозиции",
       inputName: "exposure-size",
       placeholder: "Необходимо выбрать",
-      select: true
+      select: true,
+      req: true,
+    }
+  ]
+
+  let fields2 = [
+    {
+      labelName: "Фамилия",
+      inputName: "second-name",
+      type: "text",
+      placeholder: "Иванов",
+      req: true,
+    },
+    {
+      labelName: "Имя",
+      inputName: "name",
+      type: "text",
+      placeholder: "Иван",
+      req: true,
+    },
+    {
+      labelName: "Отчество",
+      inputName: "third-name",
+      type: "text",
+      placeholder: "Иванович",
+    },
+    {
+      labelName: "Наименование компании",
+      inputName: "company-name",
+      type: "text",
+      placeholder: "ОАО Моя компания",
+      req: true,
+    },
+    {
+      labelName: "E-mail",
+      inputName: "email",
+      type: "email",
+      placeholder: "example@mail.com",
+      req: true,
+    },
+    {
+      labelName: "Контактный телефон",
+      inputName: "tel",
+      type: "tel",
+      placeholder: "+7 (ХХХ) ХХХ ХХ ХХ",
+      req: true,
     },
     {
       labelName: "Веб–сайт",
-      inputName: "company-sphere",
-      placeholder: "Необходимо выбрать",
-      select: true
+      inputName: "web-site",
+      type: "url",
+      placeholder: "www.example.com",
     },
+    {
+      empty: true,
+    },
+    {
+      labelName: "Страна / Регион",
+      inputName: "country/region",
+      placeholder: "Необходимо выбрать",
+      select: true,
+      req: true,
+    },
+    {
+      labelName: "Город",
+      inputName: "city",
+      type: "text",
+      placeholder: "Казань",
+      req: true,
+    },
+    {
+      labelName: "Ваша должность",
+      inputName: "position",
+      type: "text",
+      placeholder: "напр. Генеральный директор",
+    }
   ]
 
-.modal__container.modal-pet__container.js-modal-pet(data-target="registration")
+  let fields3 = [
+    {
+      labelName: "Фамилия",
+      inputName: "second-name",
+      type: "text",
+      placeholder: "Иванов",
+      req: true,
+    },
+    {
+      labelName: "Имя",
+      inputName: "name",
+      type: "text",
+      placeholder: "Иван",
+      req: true,
+    },
+    {
+      labelName: "Отчество",
+      inputName: "third-name",
+      type: "text",
+      placeholder: "Иванович",
+    },
+    {
+      labelName: "Наименование компании",
+      inputName: "company-name",
+      type: "text",
+      placeholder: "ОАО Моя компания",
+      req: true,
+    },
+    {
+      labelName: "E-mail",
+      inputName: "email",
+      type: "email",
+      placeholder: "example@mail.com",
+      req: true,
+    },
+    {
+      labelName: "Контактный телефон",
+      inputName: "tel",
+      type: "tel",
+      placeholder: "+7 (ХХХ) ХХХ ХХ ХХ",
+      req: true,
+    },
+    {
+      labelName: "Веб–сайт",
+      inputName: "web-site",
+      type: "url",
+      placeholder: "www.example.com",
+      req: true,
+    },
+    {
+      empty: true,
+    },
+    {
+      labelName: "Страна / Регион",
+      inputName: "country",
+      placeholder: "Необходимо выбрать",
+      select: true,
+      req: true,
+    },
+    {
+      labelName: "Город",
+      inputName: "city",
+      type: "text",
+      placeholder: "Казань",
+      req: true,
+    },
+    {
+      labelName: "Ваша должность",
+      inputName: "position",
+      type: "text",
+      placeholder: "напр. Генеральный директор",
+      req: true,
+    },
+    {
+      empty: true,
+    },
+    {
+      labelName: "Планирую принять участие в",
+      inputName: "programm",
+      placeholder: "Список тем деловой программы",
+      select: true,
+      req: true,
+    },
+    {
+      labelName: "Блок секции",
+      inputName: "block",
+      placeholder: "Выберите блок секции",
+      select: true,
+    },
+    {
+      text: true,
+      labelName: "Краткое описание тематики выступления",
+    }
+  ]
+
+.modal__container.modal-pet__container.js-modal-registrtion(data-target="registration")
   .modal__content.site-container
     button.button-reset.modal__close-btn.modal-close
       span
@@ -83,31 +259,38 @@
         .registration-type__list
           for item in types
             label.registration-type__item
-              input(type="radio" name="type" value=item.inputValue class="visually-hidden")
+              input(type="radio" name="type" value=item.inputValue class="visually-hidden js-registration-label")
               span._layer
               +icon-mono(`${item.icon}`)(width="50" height="50" class="registration-type__item-icon")
               .registration-type__item-legend= item.name
               p.registration-type__item-text 21-24 сентября
               p.registration-type__item-text Международный выставочный комплекс «Kazan Expo»
         button.button-reset.registration-type__btn.registration__btn.disabled Продолжить
-      form.registration-form
+
+      form.registration-form(data-need-validation data-form-name="exhibitor")
+        .registration__form-legend заявка участия в&nbsp;форуме
         .registration-form__heading.registration__heading Регистрация в качестве экспонента
         .registration-form__container
           for field in fields
+            - let isRequiredClass = field.req ? "_required" : false
+            - let isRequired = field.req ? true : false
+            - let isTell = field.type === "tel" ? true : false
+            - let phoneMask = field.type === "tel" ? "js-phone-mask" : false
+            - let isUrl = field.type === "url" ? true : false
             if (field.select)
               label.registration-form__label
-                span.registration-form__label-name._required= field.labelName
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
                 .custom-select
-                  select(name=field.inputName class="js-custom-select")
-                    option(placeholder=field.placeholder)= field.placeholder
+                  select(name=field.inputName class="js-custom-select" data-parsley-required=isRequired)
+                    option(value="")= field.placeholder
                     option(value="first") first
                     option(value="second") second
             else
               label.registration-form__label
-                span.registration-form__label-name._required= field.labelName
-                input.registration-form__input.input(type=field.type name=field.inputName placeholder=field.placeholder)
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                input.registration-form__input.input(class=phoneMask type=field.type name=field.inputName placeholder=field.placeholder data-parsley-url=isUrl data-parsley-phone=isTell data-parsley-required=isRequired)
           label.registration-form__label.registration-form__argeement
-            input(type="checkbox" name="argeement" value="yes" class="visually-hidden")
+            input(type="checkbox" name="argeement" value="yes" class="visually-hidden" data-parsley-required)
             p
               | Я принимаю
               a(href="/")
@@ -118,9 +301,101 @@
                 | Политику по защите персональных данных
               | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
           label.registration-form__label.registration-form__argeement
-            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden")
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
             p
               | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
         .registration-form__btns
-          button.button-reset.registration__btn._transparent(type="button") Назад
+          button.button-reset.registration__btn._transparent.js-registration-btn-back(type="button") Назад
+          button.button-reset.registration__btn(type="submit") Зарегистрироваться
+
+      form.registration-form(data-need-validation data-form-name="guest")
+        .registration__form-legend заявка участия в&nbsp;форуме
+        .registration-form__heading.registration__heading Регистрация в качестве гостя
+        .registration-form__text
+          | Дает право получить билет на посщениее экспозиции форума и деловой программы
+        .registration-form__container
+          for field in fields2
+            - let isRequiredClass = field.req ? "_required" : false
+            - let isRequired = field.req ? true : false
+            - let isTell = field.type === "tel" ? true : false
+            - let phoneMask = field.type === "tel" ? "js-phone-mask" : false
+            - let isUrl = field.type === "url" ? true : false
+            if (field.select)
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                .custom-select
+                  select(name=field.inputName class="js-custom-select" data-parsley-required=isRequired)
+                    option(value="")= field.placeholder
+                    option(value="first") first
+                    option(value="second") second
+            else if (field.empty)
+              label.registration-form__label.is-empty
+            else
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                input.registration-form__input.input(class=phoneMask type=field.type name=field.inputName placeholder=field.placeholder data-parsley-url=isUrl data-parsley-phone=isTell data-parsley-required=isRequired)
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="argeement" value="yes" class="visually-hidden" data-parsley-required)
+            p
+              | Я принимаю
+              a(href="/")
+                | Условия использования
+              | для пользователей
+              | и
+              a(href="/")
+                | Политику по защите персональных данных
+              | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
+            p
+              | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
+        .registration-form__btns
+          button.button-reset.registration__btn._transparent.js-registration-btn-back(type="button") Назад
+          button.button-reset.registration__btn(type="submit") Зарегистрироваться
+
+      form.registration-form(data-need-validation data-form-name="speeker")
+        .registration__form-legend заявка участия в&nbsp;форуме
+        .registration-form__heading.registration__heading Регистрация в качестве спикера
+        .registration-form__container
+          for field in fields3
+            - let isRequiredClass = field.req ? "_required" : false
+            - let isRequired = field.req ? true : false
+            - let isTell = field.type === "tel" ? true : false
+            - let phoneMask = field.type === "tel" ? "js-phone-mask" : false
+            - let isUrl = field.type === "url" ? true : false
+            if (field.empty)
+              label.registration-form__label.is-empty
+            else if (field.text)
+              label.registration-form__label._textarea
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                textarea(placeholder="Опишите Ваше выступление" name="description" class="registration-form__textarea" data-parsley-required=isRequired)
+            else if (field.select)
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                .custom-select
+                  select(name=field.inputName class="js-custom-select" data-parsley-required=isRequired)
+                    option(value="")= field.placeholder
+                    option(value="first") first
+                    option(value="second") second
+            else
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                input.registration-form__input.input(class=phoneMask type=field.type name=field.inputName placeholder=field.placeholder data-parsley-url=isUrl data-parsley-phone=isTell data-parsley-required=isRequired)
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="argeement" value="yes" class="visually-hidden" data-parsley-required)
+            p
+              | Я принимаю
+              a(href="/")
+                | Условия использования
+              | для пользователей
+              | и
+              a(href="/")
+                | Политику по защите персональных данных
+              | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
+          label.registration-form__label.registration-form__argeement
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
+            p
+              | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
+        .registration-form__btns
+          button.button-reset.registration__btn._transparent.js-registration-btn-back(type="button") Назад
           button.button-reset.registration__btn(type="submit") Зарегистрироваться

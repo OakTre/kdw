@@ -17,6 +17,9 @@ import initModal from './modules/initModal.js';
 import initSelect from './modules/initSelect';
 import startingAnimation from './modules/startingAnimation.js';
 import programAnimation from './modules/programAnimation.js';
+import registration from "./modules/registration.js";
+import validation from './modules/validation.js';
+import phoneMask from './modules/phoneMask.js';
 
 window.addEventListener("load", ()=>{
   setTimeout(() => {
@@ -25,6 +28,11 @@ window.addEventListener("load", ()=>{
 });
 
 documenReady(() => {
+  const kdwAPI = {
+    parsleyForms: []
+  };
+  window.kdwAPI = kdwAPI;
+
   lazyIMages();
   gallerySlider();
   exposure();
@@ -40,4 +48,7 @@ documenReady(() => {
   initModal();
   initSelect();
   programAnimation();
+  registration();
+  validation();
+  phoneMask();
 });
