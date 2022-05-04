@@ -27,6 +27,10 @@
     justify-content: center;
     pointer-events: auto;
 
+    &.swiper-button-lock {
+      display: none;
+    }
+
     &.swiper-button-disabled {
       pointer-events: none;
 

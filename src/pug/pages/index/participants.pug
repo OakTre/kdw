@@ -79,7 +79,7 @@ section.participants.section-indent-padding(id="participants")
           for item in arr_part
             .participants__item.swiper-slide
               .participants__item-img-wrapper
-                img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+                img.participants__item-img.lazy(data-src=`images/participants/${item.img}.jpg` src="#" alt=`${item.name} ${item.text}`)
               p.participants__name.site-third-heading-bold= item.name
               span.participants__position= item.text
 
@@ -98,7 +98,7 @@ section.participants.section-indent-padding
           for item in arr_part2
             .participants__item.swiper-slide
               .participants__item-img-wrapper
-                img.participants__item-img(src=`images/participants/${item.img}.jpg` alt=`${item.name} ${item.text}`)
+                img.participants__item-img.lazy(data-src=`images/participants/${item.img}.jpg` src="#" alt=`${item.name} ${item.text}`)
               p.participants__name.site-third-heading-bold= item.name
               span.participants__position= item.text
               a.participants__link(href="/")

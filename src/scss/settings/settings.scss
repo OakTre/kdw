@@ -267,3 +267,12 @@ a {
   transition: opacity .4s,visibility .4s,transform .4s ease-out;
   transform: translateY(0);
 }
+
+img.lazy {
+  opacity: 0;
+  transition: opacity var(--transition);
+
+  &.loaded {
+    opacity: 1;
+  }
+}

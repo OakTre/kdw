@@ -6,8 +6,10 @@ package-lock.json
 *.ai
 *.log
 *.pdf
+*.php
 /**/*.psd
 /.git/
 /**/_backstage
 /**/Thumbs.db
+/sftp/
 # /app/

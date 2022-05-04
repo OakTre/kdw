@@ -1,0 +1,35 @@
+-
+  let callback_fields = [
+    {
+      labelName: "Контактное лицо",
+      inputName: "name",
+      type: "text",
+      placeholder: "Иванов Иван Иванович",
+      req: true,
+    },
+    {
+      labelName: "Контактный телефон",
+      inputName: "tel",
+      type: "tel",
+      placeholder: "+7 (ХХХ) ХХХ ХХ ХХ",
+      req: true,
+    },
+  ]
+
+.modal__container.callback.js-modal-callbak(data-target="callback")
+  button.button-reset.modal__close-btn.modal-close.callback__close-btn
+    span
+    span
+  .callback__container
+    .callback__heading Узнать цену
+    p.callback__heading-text Оставьте Ваш номер телефона и мы Вам перезвоним
+    form(action="/" class="callback__form" data-need-validation)
+      for field in callback_fields
+        - let isRequiredClass = field.req ? "_required" : false
+        - let isRequired = field.req ? true : false
+        - let isTell = field.type === "tel" ? true : false
+        - let phoneMask = field.type === "tel" ? "js-phone-mask" : false
+        label.registration-form__label.callback__label
+          span.registration-form__label-name(class=isRequiredClass)= field.labelName
+          input.registration-form__input.input(class=phoneMask type=field.type name=field.inputName placeholder=field.placeholder data-parsley-phone=isTell data-parsley-required=isRequired)
+      button.button-reset.registration__btn.callback__btn(type="submit") Перезвоните мне

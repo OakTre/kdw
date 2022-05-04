@@ -13,6 +13,7 @@ export default () => {
     let sliderparticipants = new Swiper(slider, {
       slidesPerView: 4,
       spaceBetween: 32,
+      watchOverflow: true,
       navigation: {
         nextEl: parentContainer.querySelector(".js-participants-btn-next"),
         prevEl: parentContainer.querySelector(".js-participants-btn-prev"),

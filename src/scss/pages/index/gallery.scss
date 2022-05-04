@@ -54,6 +54,13 @@
     transition: all 300ms;
     opacity: 0.5;
 
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     &.swiper-slide-active {
       height: 52rem;
       z-index: 2;

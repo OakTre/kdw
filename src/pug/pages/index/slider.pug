@@ -11,8 +11,12 @@ section.section-indent-padding.gallery.js-anim-fade-out
         .gallery__wrapper
           .gallery__slider.swiper.js-gallery-slider
             .swiper-wrapper
-              img.gallery__slide.swiper-slide(src="images/gallery/img1.jpg" alt="")
-              img.gallery__slide.swiper-slide(src="images/gallery/img2.jpg" alt="")
-              img.gallery__slide.swiper-slide(src="images/gallery/img3.jpg" alt="")
-              img.gallery__slide.swiper-slide(src="images/gallery/img3.jpg" alt="")
+              .swiper-slide.gallery__slide
+                img.lazy(data-src="images/gallery/img1.jpg" src="#" alt="")
+              .swiper-slide.gallery__slide
+                img.lazy(data-src="images/gallery/img2.jpg" src="#" alt="")
+              .swiper-slide.gallery__slide
+                img.lazy(data-src="images/gallery/img3.jpg" src="#" alt="")
+              .swiper-slide.gallery__slide
+                img.lazy(data-src="images/gallery/img3.jpg" src="#" alt="")
       .gallery__container-block

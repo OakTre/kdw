@@ -28,8 +28,6 @@ export default function initMap() {
       ? mapElement.getAttribute("data-center").split(",")
       : [];
 
-    console.log("Coords", coords);
-
     let mapInstance = new ymaps.Map(mapElement, {
       center: center,
       zoom: 14,

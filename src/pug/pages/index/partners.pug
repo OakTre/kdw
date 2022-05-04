@@ -5,7 +5,7 @@ section.partners.section-indent-padding.js-partners-container(id="partners")
     ul.partners__list.grid-container.js-anim-fade-out
       - for (let i = 0; i<4; i++)
         li.partners__item
-          img(src="images/partners/img1.svg" alt="")
+          img.lazy(data-src="images/partners/img1.svg" src="#" alt="")
     button.button-reset.partners__show-more.js-partners-show-btn
       span._show Смотреть ещё
       span._hide Скрыть
@@ -17,7 +17,7 @@ section.partners.section-indent-padding.js-partners-container
     ul.partners__list.grid-container.js-anim-fade-out
       - for (let i = 0; i<9; i++)
         li.partners__item
-          img(src="images/partners/img1.svg" alt="")
+          img.lazy(data-src="images/partners/img1.svg" src="#" alt="")
     button.button-reset.partners__show-more.js-partners-show-btn
       span._show Смотреть ещё
       span._hide Скрыть

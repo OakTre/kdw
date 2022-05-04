@@ -15,7 +15,6 @@ export default() => {
 
     switch (window.flag) {
       case false:
-        console.log(window.flag);
         disableScroll();
         window.flag = true;
         break;

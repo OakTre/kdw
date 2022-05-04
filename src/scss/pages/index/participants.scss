@@ -73,6 +73,7 @@
     height: 32rem;
     display: block;
     object-fit: cover;
+    object-position: center 10%;
     margin-bottom: 2.4rem;
 
     @include mq(sm) {

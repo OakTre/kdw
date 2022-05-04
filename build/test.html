@@ -111,7 +111,7 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__container modal-pet__container js-modal-registrtion" data-target="registration">
+      <div class="modal__container js-modal-registrtion" data-target="registration">
         <div class="modal__content site-container">
           <button class="button-reset modal__close-btn modal-close"><span></span><span></span></button>
           <div class="registration">
@@ -126,7 +126,7 @@
                   </svg>
                   <div class="registration-type__item-legend">Стать спикером деловой программы</div>
                   <p class="registration-type__item-text">21-24 сентября</p>
-                  <p class="registration-type__item-text">Международный выставочный комплекс «Kazan Expo»</p>
+                  <p class="registration-type__item-text">Международный выставочный комплекс <br> «Kazan Expo»</p>
                 </label>
                 <label class="registration-type__item">
                   <input class="visually-hidden js-registration-label" type="radio" name="type" value="exhibitor"><span class="_layer"></span>
@@ -135,7 +135,7 @@
                   </svg>
                   <div class="registration-type__item-legend">Регистрация в качестве экспонента</div>
                   <p class="registration-type__item-text">21-24 сентября</p>
-                  <p class="registration-type__item-text">Международный выставочный комплекс «Kazan Expo»</p>
+                  <p class="registration-type__item-text">Международный выставочный комплекс <br> «Kazan Expo»</p>
                 </label>
                 <label class="registration-type__item">
                   <input class="visually-hidden js-registration-label" type="radio" name="type" value="guest"><span class="_layer"></span>
@@ -144,7 +144,7 @@
                   </svg>
                   <div class="registration-type__item-legend">Регистрация в качестве гостя</div>
                   <p class="registration-type__item-text">21-24 сентября</p>
-                  <p class="registration-type__item-text">Международный выставочный комплекс «Kazan Expo»</p>
+                  <p class="registration-type__item-text">Международный выставочный комплекс <br> «Kazan Expo»</p>
                 </label>
               </div>
               <button class="button-reset registration-type__btn registration__btn disabled">Продолжить</button>
@@ -343,6 +343,22 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="modal__container callback js-modal-callbak" data-target="callback">
+        <button class="button-reset modal__close-btn modal-close callback__close-btn"><span></span><span></span></button>
+        <div class="callback__container">
+          <div class="callback__heading">Узнать цену</div>
+          <p class="callback__heading-text">Оставьте Ваш номер телефона и мы Вам перезвоним</p>
+          <form class="callback__form" action="/" data-need-validation>
+            <label class="registration-form__label callback__label"><span class="registration-form__label-name _required">Контактное лицо</span>
+              <input class="registration-form__input input" type="text" name="name" placeholder="Иванов Иван Иванович" data-parsley-required>
+            </label>
+            <label class="registration-form__label callback__label"><span class="registration-form__label-name _required">Контактный телефон</span>
+              <input class="registration-form__input input js-phone-mask" type="tel" name="tel" placeholder="+7 (ХХХ) ХХХ ХХ ХХ" data-parsley-phone data-parsley-required>
+            </label>
+            <button class="button-reset registration__btn callback__btn" type="submit">Перезвоните мне</button>
+          </form>
         </div>
       </div>
     </div>

@@ -244,7 +244,7 @@
     }
   ]
 
-.modal__container.modal-pet__container.js-modal-registrtion(data-target="registration")
+.modal__container.js-modal-registrtion(data-target="registration")
   .modal__content.site-container
     button.button-reset.modal__close-btn.modal-close
       span
@@ -264,7 +264,7 @@
               +icon-mono(`${item.icon}`)(width="50" height="50" class="registration-type__item-icon")
               .registration-type__item-legend= item.name
               p.registration-type__item-text 21-24 сентября
-              p.registration-type__item-text Международный выставочный комплекс «Kazan Expo»
+              p.registration-type__item-text Международный выставочный комплекс <br> «Kazan Expo»
         button.button-reset.registration-type__btn.registration__btn.disabled Продолжить
 
       form.registration-form(data-need-validation data-form-name="exhibitor")
