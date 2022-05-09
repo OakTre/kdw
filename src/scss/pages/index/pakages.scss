@@ -18,7 +18,7 @@
 
 
   &__item {
-    grid-column: 3 span;
+    grid-column: 4 span;
     min-height: 39.1rem;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,32 @@
       color: var(--color-grey);
       text-align: center;
       font: var(--font-body-6);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        position: relative;
+        color: var(--color-grey);
+        text-align: center;
+        font: var(--font-body-6);
+        padding-left: 1rem;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 0.4rem;
+          height: 0.4rem;
+          background-color: currentColor;
+          border-radius: 50%;
+          content: "";
+        }
+      }
     }
   }
 

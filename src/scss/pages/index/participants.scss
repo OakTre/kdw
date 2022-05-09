@@ -75,6 +75,7 @@
     object-fit: cover;
     object-position: center 10%;
     margin-bottom: 2.4rem;
+    filter: grayscale(100%);
 
     @include mq(sm) {
       height: 26.5rem;

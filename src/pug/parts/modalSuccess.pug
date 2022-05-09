@@ -1,0 +1,43 @@
+.modal__container.succes(data-target="success")
+  button.button-reset.modal__close-btn.modal-close.callback__close-btn
+    span
+    span
+  .registration__succes
+    +icon-multi("success")(class="registration__succes-icon" width="100" height="100")
+    .registration__succes-heading Регистрация завершена
+    p.registration__succes-txt
+      | Информация о регистрации на мероприятие была отправлена на адрес почты
+    .registration__succes-info
+      p.registration__succes-info-text
+        | KAZAN DIGITAL WEEK — 2022
+      .registration__succes-info-item
+        +icon-mono("calendar")(class="registration__succes-info-icon" width="24" height="24")
+        p.registration__succes-info-label
+          | 21 – 22 cентября
+          a.registration__succes-info-link(href="/") Добавить в календарь
+      .registration__succes-info-item
+        +icon-mono("marker")(class="registration__succes-info-icon" width="24" height="24")
+        p.registration__succes-info-label
+          | г. Казань ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017
+          a.registration__succes-info-link(href="/") Проложить маршрут
+    .registration__succes-btns
+      button.button-reset.registration__btn детали регистрации
+      button.button-reset.registration__btn._transparent Регистрация На деловое мероприятие
+    .registration__succes-links
+      p.registration__succes-links-legend Поделиться мероприятием:
+      ul.registration__succes-links-list
+        li.registration__succes-links-item
+          a.registration__succes-links-link(href="/")
+            +icon-mono("copy")(class="registration__succes-links-icon" width="24" height="24")
+        li.registration__succes-links-item
+          a.registration__succes-links-link(href="/")
+            +icon-mono("vk")(class="registration__succes-links-icon" width="24" height="24")
+        li.registration__succes-links-item
+          a.registration__succes-links-link(href="/")
+            +icon-mono("tg")(class="registration__succes-links-icon" width="24" height="24")
+        li.registration__succes-links-item
+          a.registration__succes-links-link(href="/")
+            +icon-mono("wt")(class="registration__succes-links-icon" width="24" height="24")
+        li.registration__succes-links-item
+          a.registration__succes-links-link(href="/")
+            +icon-mono("inst")(class="registration__succes-links-icon" width="24" height="24")

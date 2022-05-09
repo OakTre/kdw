@@ -29,14 +29,26 @@ export class Modal {
       document.addEventListener('click', function (e) {
         const clickedElement = e.target.closest('[data-path]');
         if (clickedElement) {
-          let target = clickedElement.dataset.path;
-          let animation = clickedElement.dataset.animation;
-          let speed = clickedElement.dataset.speed;
-          this.animation = animation ? animation : 'fade';
-          this.speed = speed ? parseInt(speed) : 300;
-          this.modalContainer = document.querySelector(`[data-target="${target}"]`);
-          this.open();
-          return;
+          if (this.isOpen) {
+            this.close();
+            let target = clickedElement.dataset.path;
+            let animation = clickedElement.dataset.animation;
+            let speed = clickedElement.dataset.speed;
+            this.animation = animation ? animation : 'fade';
+            this.speed = speed ? parseInt(speed) : 300;
+            this.modalContainer = document.querySelector(`[data-target="${target}"]`);
+            this.open();
+            return;
+          } else {
+            let target = clickedElement.dataset.path;
+            let animation = clickedElement.dataset.animation;
+            let speed = clickedElement.dataset.speed;
+            this.animation = animation ? animation : 'fade';
+            this.speed = speed ? parseInt(speed) : 300;
+            this.modalContainer = document.querySelector(`[data-target="${target}"]`);
+            this.open();
+            return;
+          }
         }
 
         if (e.target.closest('.modal-close')) {
@@ -75,6 +87,16 @@ export class Modal {
     this.speed = speed ? parseInt(speed) : 300;
     this.modalContainer = document.querySelector(`[data-target="${target}"]`);
     this.open();
+  }
+
+  onClose(element, anima, sped) {
+    let target = element;
+    let animation = anima;
+    let speed = sped;
+    this.animation = animation ? animation : 'fade';
+    this.speed = speed ? parseInt(speed) : 300;
+    this.modalContainer = document.querySelector(`[data-target="${target}"]`);
+    this.close();
   }
 
   open() {

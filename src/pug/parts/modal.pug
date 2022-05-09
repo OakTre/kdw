@@ -254,7 +254,7 @@
         .registration-type__heading.registration__heading Регистрация участия
         .registration-type__text
           | Зарегистрируйтесь, если у Вас остались вопросы, пожалуйста
-          a(href="tel:+7")
+          button(href="/" class="button-reset" data-path="callback" data-modal-heading="Свяжитесь с нами")
             |   свяжитесь с нами
         .registration-type__list
           for item in types
@@ -268,6 +268,7 @@
         button.button-reset.registration-type__btn.registration__btn.disabled Продолжить
 
       form.registration-form(data-need-validation data-form-name="exhibitor")
+        input(type="hidden" class="input-hidden" value="testttt")
         .registration__form-legend заявка участия в&nbsp;форуме
         .registration-form__heading.registration__heading Регистрация в качестве экспонента
         .registration-form__container
@@ -399,3 +400,43 @@
         .registration-form__btns
           button.button-reset.registration__btn._transparent.js-registration-btn-back(type="button") Назад
           button.button-reset.registration__btn(type="submit") Зарегистрироваться
+
+      .registration__succes
+        +icon-multi("success")(class="registration__succes-icon" width="100" height="100")
+        .registration__succes-heading Регистрация завершена
+        p.registration__succes-txt
+          | Информация о регистрации на мероприятие была отправлена на адрес почты
+        .registration__succes-info
+          p.registration__succes-info-text
+            | KAZAN DIGITAL WEEK — 2022
+          .registration__succes-info-item
+            +icon-mono("calendar")(class="registration__succes-info-icon" width="24" height="24")
+            p.registration__succes-info-label
+              | 21 – 22 cентября
+              a.registration__succes-info-link(href="/") Добавить в календарь
+          .registration__succes-info-item
+            +icon-mono("marker")(class="registration__succes-info-icon" width="24" height="24")
+            p.registration__succes-info-label
+              | г. Казань ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017
+              a.registration__succes-info-link(href="/") Проложить маршрут
+        .registration__succes-btns
+          button.button-reset.registration__btn детали регистрации
+          button.button-reset.registration__btn._transparent Регистрация На деловое мероприятие
+        .registration__succes-links
+          p.registration__succes-links-legend Поделиться мероприятием:
+          ul.registration__succes-links-list
+            li.registration__succes-links-item
+              a.registration__succes-links-link(href="/")
+                +icon-mono("copy")(class="registration__succes-links-icon" width="24" height="24")
+            li.registration__succes-links-item
+              a.registration__succes-links-link(href="/")
+                +icon-mono("vk")(class="registration__succes-links-icon" width="24" height="24")
+            li.registration__succes-links-item
+              a.registration__succes-links-link(href="/")
+                +icon-mono("tg")(class="registration__succes-links-icon" width="24" height="24")
+            li.registration__succes-links-item
+              a.registration__succes-links-link(href="/")
+                +icon-mono("wt")(class="registration__succes-links-icon" width="24" height="24")
+            li.registration__succes-links-item
+              a.registration__succes-links-link(href="/")
+                +icon-mono("inst")(class="registration__succes-links-icon" width="24" height="24")

@@ -117,7 +117,9 @@
           <div class="registration">
             <div class="registration-type">
               <div class="registration-type__heading registration__heading">Регистрация участия</div>
-              <div class="registration-type__text">Зарегистрируйтесь, если у Вас остались вопросы, пожалуйста<a href="tel:+7">  свяжитесь с нами</a></div>
+              <div class="registration-type__text">Зарегистрируйтесь, если у Вас остались вопросы, пожалуйста
+                <button class="button-reset" href="/" data-path="callback" data-modal-heading="Свяжитесь с нами">  свяжитесь с нами</button>
+              </div>
               <div class="registration-type__list">
                 <label class="registration-type__item">
                   <input class="visually-hidden js-registration-label" type="radio" name="type" value="speeker"><span class="_layer"></span>
@@ -150,6 +152,7 @@
               <button class="button-reset registration-type__btn registration__btn disabled">Продолжить</button>
             </div>
             <form class="registration-form" data-need-validation data-form-name="exhibitor">
+              <input class="input-hidden" type="hidden" value="testttt">
               <div class="registration__form-legend">заявка участия в&nbsp;форуме</div>
               <div class="registration-form__heading registration__heading">Регистрация в качестве экспонента</div>
               <div class="registration-form__container">
@@ -342,13 +345,64 @@
                 <button class="button-reset registration__btn" type="submit">Зарегистрироваться</button>
               </div>
             </form>
+            <div class="registration__succes">
+              <svg class="icon icon-success registration__succes-icon" width="100" height="100">
+                <use xlink:href="images/sprites/sprite-multi.svg#success"></use>
+              </svg>
+              <div class="registration__succes-heading">Регистрация завершена</div>
+              <p class="registration__succes-txt">Информация о регистрации на мероприятие была отправлена на адрес почты</p>
+              <div class="registration__succes-info">
+                <p class="registration__succes-info-text">KAZAN DIGITAL WEEK — 2022</p>
+                <div class="registration__succes-info-item">
+                  <svg class="icon icon-calendar registration__succes-info-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#calendar"></use>
+                  </svg>
+                  <p class="registration__succes-info-label">21 – 22 cентября<a class="registration__succes-info-link" href="/">Добавить в календарь</a></p>
+                </div>
+                <div class="registration__succes-info-item">
+                  <svg class="icon icon-marker registration__succes-info-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#marker"></use>
+                  </svg>
+                  <p class="registration__succes-info-label">г. Казань ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017<a class="registration__succes-info-link" href="/">Проложить маршрут</a></p>
+                </div>
+              </div>
+              <div class="registration__succes-btns">
+                <button class="button-reset registration__btn">детали регистрации</button>
+                <button class="button-reset registration__btn _transparent">Регистрация На деловое мероприятие</button>
+              </div>
+              <div class="registration__succes-links">
+                <p class="registration__succes-links-legend">Поделиться мероприятием:</p>
+                <ul class="registration__succes-links-list">
+                  <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                      <svg class="icon icon-copy registration__succes-links-icon" width="24" height="24">
+                        <use xlink:href="images/sprites/sprite-mono.svg#copy"></use>
+                      </svg></a></li>
+                  <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                      <svg class="icon icon-vk registration__succes-links-icon" width="24" height="24">
+                        <use xlink:href="images/sprites/sprite-mono.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                      <svg class="icon icon-tg registration__succes-links-icon" width="24" height="24">
+                        <use xlink:href="images/sprites/sprite-mono.svg#tg"></use>
+                      </svg></a></li>
+                  <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                      <svg class="icon icon-wt registration__succes-links-icon" width="24" height="24">
+                        <use xlink:href="images/sprites/sprite-mono.svg#wt"></use>
+                      </svg></a></li>
+                  <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                      <svg class="icon icon-inst registration__succes-links-icon" width="24" height="24">
+                        <use xlink:href="images/sprites/sprite-mono.svg#inst"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal__container callback js-modal-callbak" data-target="callback">
         <button class="button-reset modal__close-btn modal-close callback__close-btn"><span></span><span></span></button>
         <div class="callback__container">
-          <div class="callback__heading">Узнать цену</div>
+          <div class="callback__heading js-modal-heading">Узнать цену</div>
           <p class="callback__heading-text">Оставьте Ваш номер телефона и мы Вам перезвоним</p>
           <form class="callback__form" action="/" data-need-validation>
             <label class="registration-form__label callback__label"><span class="registration-form__label-name _required">Контактное лицо</span>
@@ -359,6 +413,60 @@
             </label>
             <button class="button-reset registration__btn callback__btn" type="submit">Перезвоните мне</button>
           </form>
+        </div>
+      </div>
+      <div class="modal__container succes" data-target="success">
+        <button class="button-reset modal__close-btn modal-close callback__close-btn"><span></span><span></span></button>
+        <div class="registration__succes">
+          <svg class="icon icon-success registration__succes-icon" width="100" height="100">
+            <use xlink:href="images/sprites/sprite-multi.svg#success"></use>
+          </svg>
+          <div class="registration__succes-heading">Регистрация завершена</div>
+          <p class="registration__succes-txt">Информация о регистрации на мероприятие была отправлена на адрес почты</p>
+          <div class="registration__succes-info">
+            <p class="registration__succes-info-text">KAZAN DIGITAL WEEK — 2022</p>
+            <div class="registration__succes-info-item">
+              <svg class="icon icon-calendar registration__succes-info-icon" width="24" height="24">
+                <use xlink:href="images/sprites/sprite-mono.svg#calendar"></use>
+              </svg>
+              <p class="registration__succes-info-label">21 – 22 cентября<a class="registration__succes-info-link" href="/">Добавить в календарь</a></p>
+            </div>
+            <div class="registration__succes-info-item">
+              <svg class="icon icon-marker registration__succes-info-icon" width="24" height="24">
+                <use xlink:href="images/sprites/sprite-mono.svg#marker"></use>
+              </svg>
+              <p class="registration__succes-info-label">г. Казань ул. Выставочная, 1, Большие Кабаны, Респ.&nbsp;Татарстан, 420017<a class="registration__succes-info-link" href="/">Проложить маршрут</a></p>
+            </div>
+          </div>
+          <div class="registration__succes-btns">
+            <button class="button-reset registration__btn">детали регистрации</button>
+            <button class="button-reset registration__btn _transparent">Регистрация На деловое мероприятие</button>
+          </div>
+          <div class="registration__succes-links">
+            <p class="registration__succes-links-legend">Поделиться мероприятием:</p>
+            <ul class="registration__succes-links-list">
+              <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                  <svg class="icon icon-copy registration__succes-links-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#copy"></use>
+                  </svg></a></li>
+              <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                  <svg class="icon icon-vk registration__succes-links-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#vk"></use>
+                  </svg></a></li>
+              <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                  <svg class="icon icon-tg registration__succes-links-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#tg"></use>
+                  </svg></a></li>
+              <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                  <svg class="icon icon-wt registration__succes-links-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#wt"></use>
+                  </svg></a></li>
+              <li class="registration__succes-links-item"><a class="registration__succes-links-link" href="/">
+                  <svg class="icon icon-inst registration__succes-links-icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#inst"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

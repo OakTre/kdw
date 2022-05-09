@@ -1,7 +1,5 @@
-import $ from 'jquery';
-
-export default (form) => {
-  const inputs = Array.from(form.querySelectorAll("input"));
+export default function clearForm(form) {
+  const inputs = Array.from(form.querySelectorAll("input:not(.input-hidden)"));
   const textareas = Array.from(form.querySelectorAll("textarea"));
   const checkboxs = Array.from(form.querySelectorAll("input[type=checkbox]"));
   const validatedForms = Array.from(window.kdwAPI.parsleyForms);
@@ -20,3 +18,5 @@ export default (form) => {
     form.reset();
   });
 };
+
+window.clearForm = clearForm;

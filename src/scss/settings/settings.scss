@@ -28,7 +28,7 @@ html {
     font-size: 10px;
   }
 
-  @include mq(custom, max, 300) {
+  @include mq(custom, max, 320) {
     font-size: 8px;
   }
 }

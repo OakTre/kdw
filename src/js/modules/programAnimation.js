@@ -8,6 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default () => {
   const headerHeight = document.querySelector(".header").offsetHeight;
   const programmPosition = Array.from(document.querySelectorAll(".programm__themes ul li"));
+
+  if (!programmPosition) return;
+
   const programmNumbersCount = document.querySelector(".programm__nubmers-count");
   const programmNumber = document.querySelector(".programm__nubmers-position");
   programmNumbersCount.innerHTML = "0" + programmPosition.length;

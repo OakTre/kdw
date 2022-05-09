@@ -6,8 +6,6 @@ export default () => {
     isOpen: (modal) => {
       const prevActiveElmnt = modal.previousActiveElement;
 
-      console.log(prevActiveElmnt.hasAttribute("data-reg-form"));
-
       if (prevActiveElmnt.hasAttribute("data-reg-form")) {
         const regType = modal.modalContainer.querySelector(".registration-type");
         const regTypeLables = Array.from(modal.modalContainer.querySelectorAll(".js-registration-label"));
@@ -29,6 +27,7 @@ export default () => {
         const regType = modal.modalContainer.querySelector(".registration-type");
         const regTypeLables = Array.from(modal.modalContainer.querySelectorAll(".js-registration-label"));
         const btn = regType.querySelector(".registration-type__btn");
+        const regSuccess = modal.modalContainer.querySelector(".registration__succes");
 
         regTypeLables.forEach(label => label.checked = false);
 
@@ -39,6 +38,8 @@ export default () => {
           form.classList.remove("is-active");
           clearForm(form);
         });
+
+        regSuccess.classList.remove("is-active");
       }
 
       if (modal.modalContainer.classList.contains("js-modal-callbak")) {
@@ -47,4 +48,6 @@ export default () => {
       }
     },
   });
+
+  window.modal = modal;
 };
