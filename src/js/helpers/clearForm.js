@@ -3,6 +3,7 @@ export default function clearForm(form) {
   const textareas = Array.from(form.querySelectorAll("textarea"));
   const checkboxs = Array.from(form.querySelectorAll("input[type=checkbox]"));
   const validatedForms = Array.from(window.kdwAPI.parsleyForms);
+  const customSelects = Array.from(window.kdwAPI.customSelects);
 
   inputs.forEach(inpt => {
     inpt.value = "";
@@ -16,6 +17,11 @@ export default function clearForm(form) {
 
   validatedForms.forEach(form => {
     form.reset();
+  });
+
+  customSelects.forEach(select => {
+    select.destroy();
+    select.init();
   });
 };
 

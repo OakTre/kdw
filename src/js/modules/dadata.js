@@ -5,6 +5,8 @@ export default () => {
   const token = "a289c2b7ddef08f438c0c3d326f474d32a3e4a7c";
   const dadataSelects = Array.from(document.querySelectorAll(".js-dadata-select"));
 
+  if (!dadataSelects) return;
+
   let timerDelay;
   dadataSelects.forEach((select) => {
     let slct = new Choices(select, {
@@ -15,6 +17,8 @@ export default () => {
       shouldSort: false,
       allowHTML: true,
     });
+
+    window.kdwAPI.customSelects.push(slct);
 
     slct.passedElement.element.addEventListener(
       'search',

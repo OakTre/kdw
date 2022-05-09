@@ -13,6 +13,8 @@ export default function initSelects() {
         shouldSort: false,
 				allowHTML: true,
       });
+
+      window.kdwAPI.customSelects.push(slct);
     });
 
     customSelects.forEach(select => {

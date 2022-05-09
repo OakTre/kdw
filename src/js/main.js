@@ -30,7 +30,8 @@ window.addEventListener("load", ()=>{
 
 documenReady(() => {
   const kdwAPI = {
-    parsleyForms: []
+    parsleyForms: [],
+    customSelects: []
   };
   window.kdwAPI = kdwAPI;
 
