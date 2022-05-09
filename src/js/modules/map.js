@@ -4,9 +4,22 @@ export default function initMap() {
   const url = 'https://api-maps.yandex.ru/2.1/?apikey=b0b15954-57af-4901-b78c-0ad5bd94cda8&lang=ru_RU';
 
   const maps = Array.from(document.querySelectorAll('.js-map'));
+
   if (maps) {
     if (window.matchMedia("(min-width: 767px)").matches) {
-      loadApi('yandex', url, () => { ymaps.ready(init); });
+      const options = {
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+      };
+      const callback = function (entries, observer) {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > (entry.target.hasAttribute('data-intersection-ratio') ? Number(entry.target.getAttribute('data-intersection-ratio')) : 0.5)) {
+            loadApi('yandex', url, () => { ymaps.ready(init); });
+          };
+        });
+      };
+      const observer = new IntersectionObserver(callback, options);
+
+      observer.observe(document.querySelector(".js-map-laoding"))
     }
   }
 

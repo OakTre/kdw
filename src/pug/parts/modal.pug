@@ -131,7 +131,7 @@
       labelName: "Страна / Регион",
       inputName: "country/region",
       placeholder: "Необходимо выбрать",
-      select: true,
+      dadataSelect: true,
       req: true,
     },
     {
@@ -205,7 +205,7 @@
       labelName: "Страна / Регион",
       inputName: "country",
       placeholder: "Необходимо выбрать",
-      select: true,
+      dadataSelect: true,
       req: true,
     },
     {
@@ -302,7 +302,7 @@
                 | Политику по защите персональных данных
               | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
           label.registration-form__label.registration-form__argeement
-            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden")
             p
               | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
         .registration-form__btns
@@ -329,6 +329,12 @@
                     option(value="")= field.placeholder
                     option(value="first") first
                     option(value="second") second
+            else if (field.dadataSelect)
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                .custom-select
+                  select(name=field.inputName class="js-dadata-select" data-parsley-required=isRequired)
+                    option(value="")= field.placeholder
             else if (field.empty)
               label.registration-form__label.is-empty
             else
@@ -347,7 +353,7 @@
                 | Политику по защите персональных данных
               | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
           label.registration-form__label.registration-form__argeement
-            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden")
             p
               | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
         .registration-form__btns
@@ -378,6 +384,12 @@
                     option(value="")= field.placeholder
                     option(value="first") first
                     option(value="second") second
+            else if (field.dadataSelect)
+              label.registration-form__label
+                span.registration-form__label-name(class=isRequiredClass)= field.labelName
+                .custom-select
+                  select(name=field.inputName class="js-dadata-select" data-parsley-required=isRequired)
+                    option(value="")= field.placeholder
             else
               label.registration-form__label
                 span.registration-form__label-name(class=isRequiredClass)= field.labelName
@@ -394,7 +406,7 @@
                 | Политику по защите персональных данных
               | организациии АО РИВЦ, а также даю согласие на обработку своих персональных данных организации АО РИВЦ в соответствии с условиями использования
           label.registration-form__label.registration-form__argeement
-            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden" data-parsley-required)
+            input(type="checkbox" name="subcribe" value="yes" class="visually-hidden")
             p
               | Я согласен получать новости, а также информацию о мероприятиях и специальных предложениях. Я могу отписаться от рассылки в любое время
         .registration-form__btns

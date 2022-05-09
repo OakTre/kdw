@@ -20,6 +20,7 @@ import programAnimation from './modules/programAnimation.js';
 import registration from "./modules/registration.js";
 import validation from './modules/validation.js';
 import phoneMask from './modules/phoneMask.js';
+import dadata from './modules/dadata.js';
 
 window.addEventListener("load", ()=>{
   setTimeout(() => {
@@ -51,4 +52,5 @@ documenReady(() => {
   registration();
   validation();
   phoneMask();
+  dadata();
 });
