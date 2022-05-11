@@ -34,5 +34,7 @@ export default () => {
     .to(animatedContainer, {opacity: 1, y: 0, duration: 0.5, ease: "power3.out", clearProps: "all"}, "-=0.7")
     .to(header, {opacity: 1, y: 0, duration: 0.5, ease: "power3.out", clearProps: "all"}, "-=0.5")
     .to(sectionNumbders, {opacity: 1, y: 0, duration: 0.5, ease: "power3.out", clearProps: "all"}, "-=0.5")
-    .to(icon, {opacity: 1, duration: 0.8, ease: "power3.out", clearProps: "all"});
+    .to(icon, {opacity: 1, duration: 0.8, ease: "power3.out", clearProps: "all"})
+    .to(".js-third-anim span", {"-webkit-text-stroke-color": "#07D827", color: "transparent", duration: 0.3, repeat: 3, yoyo: true})
+    .to(".js-third-anim span", {"-webkit-text-stroke-color": "#07D827", color: "transparent", duration: 0.3});
 };

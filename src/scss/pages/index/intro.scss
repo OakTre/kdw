@@ -144,6 +144,12 @@
       margin-left: 6rem;
     }
 
+    span {
+      // color: transparent;
+      -webkit-text-stroke-width: 1.5px;
+      // -webkit-text-stroke-color: #07D827;
+    }
+
     @include mq(sm) {
       font-size: 3.4rem;
       line-height: 4.1rem;

@@ -19,7 +19,9 @@ export default function initMap() {
       };
       const observer = new IntersectionObserver(callback, options);
 
-      observer.observe(document.querySelector(".js-map-laoding"))
+      if (document.querySelector(".js-map-laoding")) {
+        observer.observe(document.querySelector(".js-map-laoding"))
+      }
     }
   }
 
